@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+    <head>
+        <title>codl</title>
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    </head>
+    <script>
+        window.onload = function(e){
+            xhr = new XMLHttpRequest();
+            xhr.open("GET", "quotes.txt", false);
+            xhr.send(null)
+            quotes = xhr.responseText.split("\n");
+            console.log(quotes);
+            var num = Math.floor(Math.random() * (quotes.length-1));
+            var q = document.querySelector("q");
+            q.innerHTML = "";
+            q.appendChild(document.createTextNode(quotes[num]));
+        }
+    </script>
+    <body>
+        <h1>codl</h1>
+        <q></q>
+        <div class="clear"></div>
+        <ul class="ref">
+            <li ><a><span>&#128100;</span> Corentin Delcourt</a></li>
+            <li title="Fight me IRL"><a><span>&#127758;</span> Brest, France</a></li>
+            <li title="Email"><a href="mailto:codl@codl.fr"><span>&#9993;</span> codl@codl.fr</a></li>
+            <li title="Jabber / Google Talk"><a href="xmpp:codl@codl.fr"><span>&#59168;</span> codl@codl.fr</a></li>
+            <li title="Github"><a href="https://github.com/codl/"><span>&#62208;</span> github.com/codl</a></li>
+            <li title="Twitter"><a href="https://twitter.com/codl"><span>&#62217;</span> @codl</a>
+        </ul>
+
+        <!--
+
+        <ul class="links">
+            <li>
+            <a href="https://eqbeats.org">EqBeats</a>,
+            a music sharing and publishing platform,
+            made in collaboration with <a href="http://mg0.fr/">fmang</a>.
+            </li>
+            <li>
+            <a href="http://f.codl.fr/1304/swim_post/">Swim</a>,
+            a minimalistic diving simulator,
+            made in 72 hours for
+            <a href="http://www.ludumdare.com/">the 26<sup>th</sup> Ludum Dare Game Jam</a>,
+            in collaboration with <a href="https://twitter.com/mivivex">Vivix</a>.
+            </li>
+        </ul>
+        -->
+    </body>
+</html>

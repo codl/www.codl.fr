@@ -1,0 +1,134 @@
+$bg: #311d18;
+$fg: #f0f3f8;
+
+@font-face {
+    font-family: Entypo;
+    src: url("entypo/entypo.eot");
+    src: url("entypo/entypo.eot#ie") format("embedded-opentype"),
+    url("entypo/entypo.woff") format("woff"),
+    url("entypo/entypo.ttf") format("truetype"),
+    url("entypo/entypo.svg") format("svg");
+}
+
+@font-face {
+    font-family: "Entypo Social";
+    src: url("entypo/entypo-social.eot");
+    src: url("entypo/entypo-social.eot#ie") format("embedded-opentype"),
+    url("entypo/entypo-social.woff") format("woff"),
+    url("entypo/entypo-social.ttf") format("truetype"),
+    url("entypo/entypo-social.svg") format("svg");
+    font-size: 2em;
+}
+
+html {
+    background: $bg;
+    color: $fg;
+    margin: 1%;
+    font-family: "Liberation Sans", sans-serif;
+}
+
+body {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+@mixin topquote {
+    margin: 0;
+    font-size: 1.4em;
+    font-weight: normal;
+    font-family: monospace;
+    padding: 0;
+    float:left;
+    display: inline-block;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.6);
+}
+
+h1 { @include topquote; }
+
+h1::before { content: "<"; }
+h1::after { content: ">"; }
+
+q {
+    @include topquote;
+    margin-left: 1em;
+    color: lighten($bg, 20);
+}
+
+q::before, q::after { content: ""; }
+
+$linkcolor: change-color(complement($bg), $lightness: 60, $saturation: 90);
+a { color: $linkcolor; }
+a:hover { color: lighten($linkcolor, 20); }
+
+a:not([href]) { cursor: default; }
+
+.clear { clear: both; }
+
+.ref {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ref a {
+    color: $fg;
+    text-decoration: none;
+}
+
+.ref li {
+    text-align: right;
+    float: left;
+    margin-right: 10px;
+    font-size: 0.9em;
+    vertical-align: center;
+    line-height: 20px;
+}
+
+.ref li a {
+    padding: 3px 8px;
+}
+
+.ref li span {
+    font-family: Entypo, "Entypo Social";
+    font-size: 30px;
+    position: relative;
+    top: 0.1em;
+    display: inline-block;
+}
+.ref li a:hover {
+    background: $fg;
+    color: darken($bg, 10);
+    transition: .2s color;
+}
+
+@keyframes rotato {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(1080deg);
+    }
+}
+
+.ref a:hover span {
+    animation: rotato .8s cubic-bezier(0, 1, 0, 1);
+}
+
+.links {
+    margin-top: 50px;
+}
+.links li {
+    list-style: none;
+    margin: 15px 0;
+    padding: 0;
+    clear: both;
+    vertical-align: bottom;
+}
+
+.links li a:first-child {
+    font-size: 2.5em;
+    text-decoration: none;
+}
+
+@media (max-width: 400px) {
+}
