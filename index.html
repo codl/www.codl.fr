@@ -5,48 +5,32 @@
         <link rel="stylesheet" href="style.css" type="text/css"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     </head>
-    <script>
-        window.onload = function(e){
-            xhr = new XMLHttpRequest();
-            xhr.open("GET", "quotes.txt", false);
-            xhr.send(null)
-            quotes = xhr.responseText.split("\n");
-            console.log(quotes);
-            var num = Math.floor(Math.random() * (quotes.length-1));
-            var q = document.querySelector("q");
-            q.innerHTML = "";
-            q.appendChild(document.createTextNode(quotes[num]));
-        }
-    </script>
     <body>
-        <h1>codl</h1>
-        <q></q>
-        <div class="clear"></div>
-        <ul class="ref">
-            <li ><a><span>&#128100;</span> Corentin Delcourt</a></li>
-            <li title="Fight me IRL"><a><span>&#127758;</span> Brest, France</a></li>
-            <li title="Email"><a href="mailto:codl@codl.fr"><span>&#9993;</span> codl@codl.fr</a></li>
-            <li title="Jabber / Google Talk"><a href="xmpp:codl@codl.fr"><span>&#59168;</span> codl@codl.fr</a></li>
-            <li title="Github"><a href="https://github.com/codl/"><span>&#62208;</span> github.com/codl</a></li>
-            <li title="Twitter"><a href="https://twitter.com/codl"><span>&#62217;</span> @codl</a>
-        </ul>
+        <div class="card">
+            <h1>codl</h1>
+            <h2>Corentin Delcourt</h2>
 
-        <!--
+            <p>A student in software engineering, with deep concerns about the current state of computing and where it is going.</p>
 
-        <ul class="links">
-            <li>
-            <a href="https://eqbeats.org">EqBeats</a>,
-            a music sharing and publishing platform,
-            made in collaboration with <a href="http://mg0.fr/">fmang</a>.
-            </li>
-            <li>
-            <a href="http://f.codl.fr/1304/swim_post/">Swim</a>,
-            a minimalistic diving simulator,
-            made in 72 hours for
-            <a href="http://www.ludumdare.com/">the 26<sup>th</sup> Ludum Dare Game Jam</a>,
-            in collaboration with <a href="https://twitter.com/mivivex">Vivix</a>.
-            </li>
-        </ul>
-        -->
+            <footer>
+                <span title="Also works as an XMPP address"><a href="mailto:codl@codl.fr">codl@codl.fr</a></span>
+                <span><a href="http://f.codl.fr/1306/pubkey.txt">PGP key</a></span>
+                <span><a href="https://twitter.com/codl">@codl</a></span>
+                <span><a href="https://github.com/codl">github.com/codl</a></span>
+             </footer>
+
+        </div>
+        <div class="card">
+            <h2>Test card</h2>
+            <p>Lololorem ipsum dolololor sit amet etc...</p>
+            <p>The @warn directive prints the value of a SassScript expression to the standard error output stream. It's useful for libraries that need to warn users of deprecations or recovering from minor mixin usage mistakes. There are two major distinctions between @warn and @debug.</p>
+            <h3>Lel title</h3>
+            <p>SassScript supports basic control directives for including styles only under some conditions or including the same style several times with variations.</p>
+            <p>The CSS justify-content property defines how a browser distributes available space between and around elements when aligning flex items in the main-axis of the current line. The alignment is done after the lengths and auto margins are applied, meaning that, if there is at least one flexible element, with flex-grow different than 0, it will have no effect as there won't be any available space.</p>
+            <p>The flex items are packed starting from the main-start. Margins of the first flex item is flushed with the main-start edge of the line and each following flex item is flushed with the preceding.</p>
+            <h3>In conclusion&hellip;</h3>
+            <p>ur a faget</p>
+            <footer>See you space cowboy&hellip;</footer>
+        </div>
     </body>
 </html>
