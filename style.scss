@@ -7,6 +7,12 @@ body {
     padding: 10% 0;
 }
 
+@media screen and (max-height: 300px) {
+    body{
+        padding: 0;
+    }
+}
+
 .card {
     font-family: sans-serif;
     background: white;
