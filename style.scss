@@ -33,12 +33,12 @@ body {
         box-shadow: 0 0 5px 0 rgba(0,0,0,0.2), 0 -7px 5px -5px rgba(0,0,0,0.1);
     }
 
-    @each $level in 1, 2, 3, 4, 5 {
+    @each $level in 1, 2, 3, 4, 5, 6 {
         h#{$level} {
             margin: 1px $cardmargin 1px $cardmargin/2;
             border-left: 3px solid change-color($hilight, $alpha: max(0, 1 - ($level - 1)*0.3));
             padding-left: $cardmargin/2 - 3px;
-            color: mix($textcolor, black, $level * 20);
+            color: mix($textcolor, black, min(100, $level * 20));
         }
     }
 
@@ -51,11 +51,11 @@ body {
     footer {
         font-size: 0.8em;
         margin: 0 $cardmargin;
+        color: change-color($textcolor, $alpha: 0.6);
         display: flex;
         display: -webkit-flex;
         flex-direction: row;
         -webkit-flex-direction: row;
-        color: change-color($textcolor, $alpha: 0.6);
         text-align: center;
         justify-content: center;
         -webkit-justify-content: center;
