@@ -2,6 +2,13 @@ $hilight: #4c4;
 $textcolor: #444;
 $cardmargin: 20px;
 
+@mixin hyphens($type) {
+    hyphens: $type;
+    -moz-hyphens: $type;
+    -ms-hyphens: $type;
+    -webkit-hyphens: $type;
+}
+
 body {
     background: #ddd;
     padding: 10% 0;
@@ -37,6 +44,7 @@ body {
 
     p {
         margin: $cardmargin;
+        @include hyphens(auto);
         text-align: justify;
     }
 
