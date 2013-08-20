@@ -71,10 +71,12 @@ body {
         text-align: center;
         justify-content: center;
         -webkit-justify-content: center;
+        flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
         span {
             position: relative;
-            flex: 1 1 auto;
-            -webkit-flex: 1 1 auto;
+            flex: 1 0 auto;
+            -webkit-flex: 1 0 auto;
             display: inline-block;
         }
         span.btc div {
