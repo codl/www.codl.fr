@@ -1,100 +1,62 @@
-$hilight: #4c4;
-$textcolor: #444;
-$cardmargin: 20px;
-
-@font-face {
-    font-family: 'pt_sansregular';
-    src: url('fonts/PTS55F-webfont.eot');
-    src: url('fonts/PTS55F-webfont.eot?#iefix') format('embedded-opentype'),
-    url('fonts/PTS55F-webfont.woff') format('woff'),
-    url('fonts/PTS55F-webfont.ttf') format('truetype'),
-    url('fonts/PTS55F-webfont.svg#pt_sansregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+* {
+    margin: 0;
 }
-
-
-@mixin hyphens($type) {
-    hyphens: $type;
-    -moz-hyphens: $type;
-    -ms-hyphens: $type;
-    -webkit-hyphens: $type;
+html {
+    background: url("bg.png"), linear-gradient(150deg, #a25, #d65 30%, #fc8 70%, #fed);
+    font-size: 13px;
+    @media screen and (max-width: 900px) { font-size: 10px; }
+    @media screen and (max-width: 700px) { font-size: 8px; }
 }
-
 body {
-    background: #ddd;
-    padding: 10% 0;
-}
-
-@media screen and (max-height: 300px) {
-    body{
-        padding: 0;
-    }
-}
-
-.card {
-    font-family: pt_sansregular, sans-serif;
-    background: white;
-    color: $textcolor;
-    max-width: 30em;
-    padding: $cardmargin/2 0 $cardmargin/2;
-    box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
-    margin: 30px auto;
-    &:hover {
-        transition: 0.2s box-shadow;
-        box-shadow: 0 0 5px 0 rgba(0,0,0,0.2), 0 -7px 5px -5px rgba(0,0,0,0.1);
-    }
-
-    @each $level in 1, 2, 3, 4, 5, 6 {
-        h#{$level} {
-            margin: 1px $cardmargin 1px $cardmargin/2;
-            border-left: 3px solid change-color($hilight, $alpha: max(0, 1 - ($level - 1)*0.3));
-            padding-left: $cardmargin/2 - 3px;
-            color: mix($textcolor, black, min(100, $level * 20));
-        }
-    }
-
-    p {
-        margin: $cardmargin;
-        @include hyphens(auto);
-        text-align: justify;
-    }
-
-    footer {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    text-align: center;
+    font-family: roboto-thin;
+    width: 100%;
+    height: 100%;
+    max-width: 25em;
+    margin: 0 auto;
+    font-size: 2.5em;
+    color: white;
+    text-shadow: 0 0 10px rgba(0,0,0,.2);
+    animation: appear 1s;
+    -webkit-animation: appear 1s;
+    position: relative;
+    div.links {
         font-size: 0.8em;
-        margin: .6em $cardmargin;
-        color: change-color($textcolor, $alpha: 0.6);
         display: flex;
-        display: -webkit-flex;
         flex-direction: row;
-        -webkit-flex-direction: row;
-        text-align: center;
-        justify-content: center;
-        -webkit-justify-content: center;
-        flex-wrap: wrap;
-        -webkit-flex-wrap: wrap;
-        span {
-            position: relative;
-            flex: 1 0 auto;
-            -webkit-flex: 1 0 auto;
-            display: inline-block;
-        }
-        span.btc div {
-            position: absolute;
-            padding-top: 1em;
-            width:100%;
-            display: none;
-        }
-        span.btc:hover div {
-            display: block;
-            img{
-                box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
-                max-width:100%;
-            }
-        }
-        &, a {
-            color: change-color($textcolor, $alpha: 0.6);
+        justify-content: space-around;
+        margin-top: 3em;
+        a {
+            color: white;
             text-decoration: none;
         }
     }
+    em {
+        font-family: roboto-regular-italic;
+        font-style: normal;
+    }
+}
+
+@keyframes appear {
+    0% { opacity: 0; top: -.3em; }
+    100% { opacity: 1; top: 0; }
+}
+
+@-webkit-keyframes appear {
+    0% { opacity: 0; top: -.3em; }
+    100% { opacity: 1; top: 0; }
+}
+
+@font-face {
+    font-family: roboto-thin;
+    src: local("Roboto"), url("roboto/Roboto-Thin.ttf");
+}
+
+@font-face {
+    font-family: roboto-regular-italic;
+    src: local("Roboto"), url("roboto/Roboto-Italic.ttf");
 }
