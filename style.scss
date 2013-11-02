@@ -55,10 +55,10 @@ body {
 
 @font-face {
     font-family: roboto-thin;
-    src: local("Roboto"), url("roboto/Roboto-Thin.ttf");
+    src: url("roboto/Roboto-Thin.ttf");
 }
 
 @font-face {
     font-family: roboto-regular-italic;
-    src: local("Roboto"), url("roboto/Roboto-Italic.ttf");
+    src: url("roboto/Roboto-Italic.ttf");
 }
