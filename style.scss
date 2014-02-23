@@ -1,3 +1,5 @@
+$color: #411;
+
 @mixin hyphens($type) {
     hyphens: $type;
     -moz-hyphens: $type;
@@ -7,126 +9,45 @@
 
 * {
     margin: 0;
-    line-height: 1.3em;
-}
-html {
-    transition: font-size .3s;
-    font-size: 21px;
-    @media screen and (max-width: 900px) { font-size: 16px; }
-    color: #110;
-    font-family: roboto;
-    background: #f6f6f6;
 }
 
-header {
-    text-align: center;
-    h1 {
-        transition: font-size .3s;
-        font-weight: normal;
-        font-size: 3.5rem;
-        padding: 2em 0;
-        font-family: roboto-thin;
-        .p-nickname {
-            //font-family: roboto;
-            background: radial-gradient(ellipse 50% 5% at center bottom, rgba(160,200,0,1), rgba(160,200,0,0));
-        }
-        @media screen and (max-width: 600px) {
-            font-size: 3rem;
-        }
-        @media screen and (max-width: 500px) {
-            display: flex;
-            flex-direction: column;
-            padding: 1em 0;
-        }
-    }
-    background: linear-gradient(to bottom, rgba(246,246,246,0.8), rgba(246,246,246, 1)),
-        url("nichijou_city_spacer.jpg") scroll center center / cover;
+body {
+    line-height: 1.8em;
+    font-family: serif;
+    font-size: 2em;
+    background: $color;
+    position: absolute;
+    min-height: 100%;
+    width: 100%;
+    color: change-color($color, $lightness: 80%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-p, li, h2, h3, h4, h5, h6 {
-    margin: .9em auto;
-    max-width: 30rem;
-    @include hyphens(auto);
+p {
+    margin: 1em auto;
+    width: 24em;
     text-align: justify;
-    padding: 0 .5em;
+    @include hyphens(auto);
 }
-p em {
-    font-family: roboto-italic;
-}
-
-h2 {
-    font-weight: normal;
-    font-family: roboto-thin;
-    font-size: 1.3em;
-    margin: 4em auto 1em;
-    border-top: 1px solid rgba(0,0,0,0.1);
-    padding-top: 0.5em;
-}
-
-h3 {
-    font-weight: normal;
-    font-family: roboto-italic;
-    font-size: 1em;
-    margin: 3em auto 1em;
-}
-
 
 a {
-    color: inherit;
-    display: inline-block;
-    line-height: 1em;
-    border-bottom: .1em solid #9c3;
-    text-decoration: none;
-}
-
-ul {
-    padding: 0;
-    li {
-        list-style: circle;
+    color: change-color($color, $lightness: 70%);
+    &:visited {
+        color: change-color($color, $lightness: 80%);
+    }
+    &:hover {
+        color: change-color($color, $lightness: 50%, $saturation: 90%);
     }
 }
 
-.annotate {
-    position: relative;
-    display: inline-block;
-    line-height: 1em;
-    border-bottom: .1em dotted rgba(0,0,0,0.3);
-    &.active {
-        cursor: help;
+@media screen and (max-width: 780px){
+    body{
+        font-size: 1.5em;
     }
-    .annotation {
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 1rem;
-        font-size: 0.6em;
-        padding: 0.5em;
-        text-align: center;
-        background: rgba(255,255,255,0.7);
-        color: black;
+    p {
+        margin: 1em;
+        width: auto;
     }
 }
-
-
-
-
-@font-face {
-    font-family: roboto;
-    src: url("roboto/Roboto-Regular.ttf");
-}
-
-@font-face {
-    font-family: roboto-thin;
-    src: url("roboto/Roboto-Thin.ttf");
-}
-
-@font-face {
-    font-family: roboto-thin-italic;
-    src: url("roboto/Roboto-ThinItalic.ttf");
-}
-
-@font-face {
-    font-family: roboto-italic;
-    src: url("roboto/Roboto-Italic.ttf");
-}
-
