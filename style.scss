@@ -1,53 +1,125 @@
-$color: #411;
-
-@mixin hyphens($type) {
-    hyphens: $type;
-    -moz-hyphens: $type;
-    -ms-hyphens: $type;
-    -webkit-hyphens: $type;
-}
-
-* {
-    margin: 0;
-}
-
 body {
-    line-height: 1.8em;
-    font-family: serif;
+    background: #eee;
+    color: black;
+    font-family: sans-serif;
+    margin: 3rem 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+header.bigheader {
+    margin: 3em 1em 2em;
+    max-width: none;
+    justify-content:center;
+}
+
+header:not(.bigheader), .post *, .archive, .categories {
+    max-width: 30rem;
+    margin-left: auto; margin-right: auto;
+}
+
+header:not(.bigheader){
+    font-size: 0.5em;
+    max-width: 36rem;
+}
+
+header:not(.bigheader) img{
+    max-height: 3rem;
+}
+
+header h1 {
+    font-weight: normal;
     font-size: 2em;
-    background: $color;
-    position: absolute;
-    min-height: 100%;
-    width: 100%;
-    color: change-color($color, $lightness: 80%);
+}
+
+header h2 {
+    font-weight: normal;
+    font-size: 1.6em;
+    color: rgba(0,0,0,0.5)
+}
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+header.name {
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
-p {
-    margin: 1em auto;
-    width: 24em;
-    text-align: justify;
-    @include hyphens(auto);
+header h1, header h2 {
+    flex: 1;
+    margin: 0;
+    vertical-align: center;
+}
+
+header img {
+    max-height: 6em;
+    vertical-align:middle;
 }
 
 a {
-    color: change-color($color, $lightness: 70%);
-    &:visited {
-        color: change-color($color, $lightness: 80%);
-    }
-    &:hover {
-        color: change-color($color, $lightness: 50%, $saturation: 90%);
-    }
+    text-decoration: none;
+    color: #b33;
+}
+a:visited {
+    color: #c70;
+}
+a:hover {
+    color: #f55;
 }
 
-@media screen and (max-width: 780px){
-    body{
-        font-size: 1.5em;
-    }
-    p {
-        margin: 1em;
-        width: auto;
-    }
+nav {
+    text-align: center;
+}
+
+.post {
+    margin: .9em 0;
+    text-align: justify;
+    hyphens: auto;
+    -moz-hyphens: auto;
+}
+
+.post h3 {
+    margin: 0 auto;
+}
+
+.meta {
+    color: rgba(0,0,0,0.4);
+    font-size: 0.7em;
+    margin: 0 auto;
+}
+
+.post > img {
+    max-width: 100%;
+    display: block;
+}
+
+.categories {
+    padding: 0;
+}
+
+.categories li {
+    list-style: none;
+    display: inline;
+}
+
+.categories li:not(:last-child):after{
+    content: ',';
+}
+
+.archive {
+    padding: 0;
+}
+
+.archive li {
+    list-style: none;
+    margin-bottom: 1em;
+    padding-bottom: 0.1em;
+}
+.archive li a {
+    flex: 1;
 }
