@@ -1,0 +1,64 @@
+==================================================================
+https://keybase.io/codl
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://www.codl.fr
+  * I am codl (https://keybase.io/codl) on keybase.
+  * I have a public key with fingerprint 2584 559B AA84 7C42 1457  EA46 07E4 1C79 CF84 A61F
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "2584559baa847c421457ea4607e41c79cf84a61f",
+            "host": "keybase.io",
+            "key_id": "07e41c79cf84a61f",
+            "uid": "c0eaa6d4ed1f4251a004ff1bee433a00",
+            "username": "codl"
+        },
+        "service": {
+            "hostname": "www.codl.fr",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1408025909,
+    "expire_in": 157680000,
+    "prev": "cf98f8efc63c85d6225ecf52022ffe8be03a272973e811d95714e67d78a78b31",
+    "seqno": 9,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v2
+
+owFtkV1IFFEUx3f9yDRFS4QEibp9LJasM7N3Pgv7QMRAJPVBCHS5M3PvOmk7u7Pj
+rqJr+WAfmuAXPdlLIIKQJIlYohUYxUZPgj1YkmJpVmQPYVlmM2Jv3ZfLOef3/59z
+OF1p8Y445+P0qVjmp/KHzpdPvsiOis/PTjUBWVcbgdQEavH2RzS/DxsBQ/ObQAIM
+K0CWFWWEBMgrkKEhy2MEOYrHkFZ4USECRBxNQB6o0UO2wrKRUQi7Nd3KWYFXU63s
+f/j67YJCYYQ4FWKVJpBhaURRkBBaxhh6PFZggyFs+NFlbNO6WgeiecDKhDUF2/Pa
+bXeqkUjEbRNuYliygKGbuqLXWYUa0wxIts5sDGyDWPbuWHhlza9aK1uCMDZCmu4H
+Em2RiqnZnjSkBIphRUrMA7ghoBnYq9kEy3MCZT27DQ7bkxFRIAImCudRBFblGIbF
+CmEZimEIwYKMKQ9ieEbkPVigaVVkeRpijld5AfGC7KGBvVTQrwPJ6mQin2UZ0nx+
+ZNYbGERTbjpzEhzOOMeuxDj7ao6U5Ix/t2y5nbR5QFnzvVtHmvDne/6e2EiwM1y5
+EEsLLquVV1NXS2PXp0l08qirTM9qH11POTZnDDXkstlvis5dSn1ecHo8Y3FqjQrs
+yxh3P5U6jl+s6E5a+NUVvBIcm1k8/LE5fbb4lVgV2jufOODKPpvzovLkV2VE7it3
+w6rqDXo9Yau9vjSpv/la4duCmb6tn0ckHrWOFH/7oN/6bc4vKUsrE8KhohsPomDW
+6C404+fK4vNdpVFyouRCZLpndHj3/t6V/OX3Cz82cmlc0ubt5Tyvwx092fdbhjNb
+cTT5Ueemu3+QK2uumjx4fm2stg+eKRq8u0pa741mtTmHBibZiTvVfwE=
+=SSVC
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/codl
+
+==================================================================
+
