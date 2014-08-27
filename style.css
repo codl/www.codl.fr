@@ -14,14 +14,61 @@ a {
     background: #fef;
 }
 
+.hidden {
+    opacity: 0;
+    animation: hidden 10s infinite;
+}
+.hidden:hover {
+    opacity: 1;
+    animation: none;
+}
+
 @keyframes blinker {
-    0% {
-        opacity: 0;
-    }
-    49% {
+    0%, 49% {
         opacity: 0;
     }
     50%, 100% {
         opacity: 1;
     }
+}
+
+@keyframes hidden {
+    0%,33% {
+        opacity: 0;
+    }
+    66% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.dennis {
+    animation: dennis 6s infinite linear;
+    transform-origin: top left;
+}
+
+@keyframes dennis {
+    0% {
+        transform: scale(1);
+        background: #009;
+    }
+    25% {
+        transform: scale(1.5);
+    }
+    33% {
+        background: #090;
+    }
+    66% {
+        background: #900;
+    }
+    75% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1);
+        background: #009;
+    }
+
 }
