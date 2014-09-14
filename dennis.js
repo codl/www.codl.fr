@@ -3,6 +3,8 @@ $(function($){
     function dennis(){
         if(we_have_dennis) return;
 
+        ga('send', 'event', 'dennis', 'dennis');
+
         we_have_dennis = true;
 
         var audio = $('<audio/>', { src: '/dennis.ogg', loop: true })[0];
