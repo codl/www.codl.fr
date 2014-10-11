@@ -78,3 +78,11 @@ base_url: http://www.codl.fr/
 title: codl
 author_name: codl
 author_uri: http://www.codl.fr/
+
+
+
+deploy:
+    default:
+        kind: rsync
+        dst:  "ana.codl.fr:/srv/www.codl.fr"
+        options: [ '-ai', '--delete-after' ]
