@@ -1,37 +1,169 @@
-$glaceon-blue: #8dd;
-$dark: #1B0140;
+@import 'colours';
+$max-width: 30rem;
 
 html {
     font-size: 11pt;
-    max-width: 20em;
     margin: 0 auto;
+    text-align: left;
 }
 
 body {
     background: #234;
     color: $glaceon-blue;
-    text-align: center;
     margin: 0 1em;
     font-family: "Fira sans", sans-serif;
 }
 
-* { z-index: 10; }
+p {
+    margin: 1em 0;
+}
 
 img.avatar {
     transform: scale(2);
-    max-width: 100%;
-    margin: 9em 0 3em;
-    z-index: 0;
+    pointer-events: none;
+}
+
+header {
+    img.avatar {
+        border: none;
+        position: absolute;
+        top: 0;
+        left: -4rem;
+        float: left;
+        max-width: 6rem;
+        padding: 0;
+    }
+    display: flex;
+    flex-direction: column;
+    overflow: none;
+    position: relative;
+    max-width: $max-width;
+    margin: 0 auto 1rem;
+    min-height: 6rem;
+    justify-content: space-around;
+    * {
+        padding-left: 3rem;
+    }
+    aside {
+        opacity: 0.5;
+        &#date {
+            padding-top: 0.5rem;
+        }
+        &#tags {
+            padding-bottom: 0.5rem;
+            a {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+                &:hover {
+                    background: transparent;
+                    color: inherit;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    h2 {
+        vertical-align: bottom;
+        margin: 0;
+    }
+}
+
+article {
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    text-align: justify;
+    p:first-child {
+        text-indent: 2em;
+    }
+    &>* {
+        max-width: $max-width;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    div.wide {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    ul {
+        padding: 0;
+    }
+
+    a {
+        color: inherit;
+        display: inline;
+        text-decoration: underline;
+        background: transparent;
+        padding: 0;
+        &:hover {
+            color: white;
+            background: transparent;
+        }
+        img {
+            border: 1px solid change-color($glaceon-blue, $alpha: .1);
+        }
+        &:hover img {
+            border-color: change-color($glaceon-blue, $alpha: .5);
+        }
+    }
+}
+
+
+@font-face{
+    font-family: 'Fira Sans';
+    src: url('fira/eot/FiraSans-Regular.eot');
+    src: local('Fira Sans Regular'), url('fira/eot/FiraSans-Regular.eot') format('embedded-opentype'), url('fira/woff/FiraSans-Regular.woff') format('woff'), url('fira/ttf/FiraSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Fira Sans';
+    src: url('fira/eot/FiraSans-Bold.eot');
+    src: local('Fira Sans Bold'), url('fira/eot/FiraSans-Bold.eot') format('embedded-opentype'), url('fira/woff/FiraSans-Bold.woff') format('woff'), url('fira/ttf/FiraSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 1em 0 .6em;
+    font-weight: 700;
+}
+
+footer {
+    max-width: $max-width;
+    margin: 1em auto;
+    a {
+        background: transparent;
+        display: inline;
+        opacity: 0.5;
+        color: inherit;
+        text-decoration: none;
+        &:hover {
+            opacity: 1;
+            background: transparent;
+        }
+    }
+}
+
+hr {
+    border-color: $glaceon-blue;
+    opacity: 0.5;
 }
 
 ul {
-    padding: 0;
     list-style: none;
     li {
         margin-top: 1.3em;
+        line-height: 1.5em;
     }
     text-align: left;
-    margin: 3em 0;
+    margin: 3em auto;
+    padding: 0;
+    max-width: $max-width;
 }
 
 a {
@@ -43,75 +175,14 @@ a {
         background: $dark;
         color: $glaceon-blue;
     }
-}
-
-h1 {
-    font-size: 2em;
-    margin: 1em 0 .6em;
-    font-weight: 700;
-    span{
-        will-change: transform;
-        display: inline-block;
-        animation: high-score 1.2s ease-in-out alternate infinite;
-        -webkit-animation: high-score 1.2s ease-in-out alternate infinite;
-    }
-    span:nth-child(1){
-        animation-delay: -300ms;
-        -webkit-animation-delay: -300ms;
-    }
-    span:nth-child(2){
-        animation-delay: -200ms;
-        -webkit-animation-delay: -200ms;
-    }
-    span:nth-child(3){
-        animation-delay: -100ms;
-        -webkit-animation-delay: -100ms;
+    img {
+        border: none;
     }
 }
 
-@keyframes high-score {
-    from {
-        transform: translateY(0) rotate(2deg);
-    }
-    to {
-        transform: translateY(-.5em) rotate(-8deg);
-    }
-}
+div#tags {
+    max-width: $max-width;
+    margin: 0 auto;
+    text-indent: 2em;
 
-@-webkit-keyframes high-score {
-    from {
-        transform: translateY(0) rotate(2deg);
-    }
-    to {
-        transform: translateY(-.5em) rotate(-8deg);
-    }
-}
-
-p {
-    margin: 1em 0;
-    transform: translateX(0);
-    // without this, chrome overlays the avatar over the paragraphs for some reason, and that makes them impossible to select
-}
-
-
-@font-face{
-    font-family: 'Fira Sans';
-    src: url('fira/eot/FiraSans-Regular.eot');
-    src: local('Fira Sans Regular'),
-         url('fira/eot/FiraSans-Regular.eot') format('embedded-opentype'),
-         url('fira/woff/FiraSans-Regular.woff') format('woff'),
-         url('fira/ttf/FiraSans-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face{
-    font-family: 'Fira Sans';
-    src: url('fira/eot/FiraSans-Bold.eot');
-    src: local('Fira Sans Bold'),
-         url('fira/eot/FiraSans-Bold.eot') format('embedded-opentype'),
-         url('fira/woff/FiraSans-Bold.woff') format('woff'),
-         url('fira/ttf/FiraSans-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
 }

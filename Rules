@@ -13,41 +13,73 @@
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
 
-compile '/index/' do
-  filter :erb
-  layout 'bare'
+
+preprocess do
+  all_tags.each do |tag|
+    items << Nanoc::Item.new(
+      "",
+      { :tag => tag },
+      "/tags/#{slug(tag)}/"
+    )
+  end
+end
+
+compile '/' do
+    filter :erb
+    layout 'bare'
+end
+
+compile '/posts/*' do
+    filter :kramdown
+    layout 'post'
+end
+
+compile '/tags/*/' do
+    filter :erb
+    layout 'tags'
 end
 
 compile '*' do
-  if item[:extension] == 'scss'
-    filter :sass
-  elsif item.binary? or ['css', 'txt'].include? item[:extension]
-    # do nothing
-  elsif ['md', 'markdown'].include? item[:extension]
-    filter :markdown
-    layout 'default'
-  else
-    filter :erb
-    layout 'default'
-  end
+    if item[:extension] == 'scss'
+        filter :sass, :syntax => :scss
+    elsif item.binary? or ['css', 'txt'].include? item[:extension]
+        # do nothing
+    elsif ['md', 'markdown'].include? item[:extension]
+        filter :kramdown
+        layout 'default'
+    else
+        filter :erb
+        layout 'default'
+    end
 end
 
 route '/keybase/' do
-  '/keybase.txt'
+    '/keybase.txt'
+end
+
+route "/posts/*" do
+    slug = /([^\/]+)\/?$/.match(item.identifier).captures[0]
+    year = attribute_to_time(@item[:created_at]).year
+
+    "/#{year}/#{slug}/index.html"
 end
 
 route '*' do
-  if item.binary? or ['css', 'txt'].include? item[:extension]
-    if item[:extension]
-      item.identifier.chop + '.' + item[:extension]
+    if item.binary? or ['css', 'txt'].include? item[:extension]
+        if item[:extension]
+            item.identifier.chop + '.' + item[:extension]
+        else
+            item.identifier.chop
+        end
+    elsif item[:extension] == 'scss'
+        if item.identifier[0] == '_'
+            nil
+        else
+            item.identifier.chop + '.css'
+        end
     else
-      item.identifier.chop
+        item.identifier + 'index.html'
     end
-  elsif item[:extension] == 'scss'
-    item.identifier.chop + '.css'
-  else
-    item.identifier + 'index.html'
-  end
 end
 
 layout '*', :erb

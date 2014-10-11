@@ -1,8 +1,9 @@
 ---
 title: "codl"
+style: "home"
 ---
 
-<img class="avatar" src="glaceon-icon-cropped-bg.png"/>
+<img class="avatar" src="/glaceon-icon-cropped-bg.png"/>
 <h1><span>c</span><span>o</span><span>d</span><span>l</span></h1>
 <p>A.k.a. Corentin Delcourt.</p>
 <p>Computer person.</p>
@@ -13,4 +14,9 @@ title: "codl"
     <li>Tweets: <a rel="me" href="https://twitter.com/codl/">@codl</a></li>
     <li>Commits: <a rel="me" href="https://github.com/codl/">github.com/codl</a></li>
     <li>“Art”: <a rel="me" href="http://codl.deviantart.com/">codl.deviantart.com</a></li>
+    <% if post = sorted_articles.first %>
+    <li>Blog: <a href="/archive/">archive</a></li>
+    <li>Latest blog post: <%= link_to post[:title], post.path %></li>
+    <% end %>
 </ul>
+

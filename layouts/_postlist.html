@@ -1,0 +1,14 @@
+<ul id="posts">
+    <% year = 0 %>
+    <%
+    @items.each do |post|
+    postyear = attribute_to_time(post[:created_at]).year
+    if year != postyear
+        year = postyear %>
+        <li class="year"><%= postyear %></li>
+    <% end %>
+    <li>
+        <%= link_to post[:title], post.path %>
+    </li>
+    <% end %>
+</ul>

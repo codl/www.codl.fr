@@ -1,0 +1,5 @@
+
+<% render 'default', item: { title: "Posts tagged #{@item[:tag]}" } do %>
+    <% items = items_with_tag(@item[:tag]).sort { |l, r| l.created_at <=> r.created_at } %>
+    <%= render '_postlist', items: items %>
+<% end %>

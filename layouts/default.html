@@ -13,6 +13,13 @@
     <meta property="twitter:account_id" content="4503599630855454" />
 </head>
 <body>
+    <header>
+        <img class="avatar" src="/glaceon-icon-cropped-bg.png"/>
+        <h2><%= @item[:title] %></h2>
+    </header>
     <%= yield %>
+    <footer>
+        <a href="/">&lt Home</a>
+    </footer>
 </body>
 </html>
