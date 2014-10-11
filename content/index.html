@@ -15,7 +15,7 @@ style: "home"
     <li>Commits: <a rel="me" href="https://github.com/codl/">github.com/codl</a></li>
     <li>“Art”: <a rel="me" href="http://codl.deviantart.com/">codl.deviantart.com</a></li>
     <% if post = sorted_articles.first %>
-    <li>Blog: <a href="/archive/">archive</a></li>
+    <li>Blog: <a href="/archive/">archive</a> <a href="/atom.xml">atom feed</a></li>
     <li>Latest blog post: <%= link_to post[:title], post.path %></li>
     <% end %>
 </ul>

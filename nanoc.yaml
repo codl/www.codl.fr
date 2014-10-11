@@ -72,3 +72,9 @@ prune:
             # E.g.:
             #   exclude: ['^/server_status']
             exclude: []
+
+
+base_url: http://www.codl.fr/
+title: codl
+author_name: codl
+author_uri: http://www.codl.fr/

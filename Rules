@@ -15,13 +15,13 @@
 
 
 preprocess do
-  all_tags.each do |tag|
-    items << Nanoc::Item.new(
-      "",
-      { :tag => tag },
-      "/tags/#{slug(tag)}/"
-    )
-  end
+    all_tags.each do |tag|
+        items << Nanoc::Item.new(
+            "",
+            { :tag => tag },
+            "/tags/#{slug(tag)}/"
+        )
+    end
 end
 
 compile '/' do
@@ -37,6 +37,10 @@ end
 compile '/tags/*/' do
     filter :erb
     layout 'tags'
+end
+
+compile '/atom/' do
+    filter :erb
 end
 
 compile '*' do
@@ -62,6 +66,10 @@ route "/posts/*" do
     year = attribute_to_time(@item[:created_at]).year
 
     "/#{year}/#{slug}/index.html"
+end
+
+route '/atom/' do
+    '/atom.xml'
 end
 
 route '*' do

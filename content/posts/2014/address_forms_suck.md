@@ -1,6 +1,7 @@
 ---
 title: Address forms suck
 created_at: 2014-04-26
+updated_at: 2014-10-11
 kind: article
 tags: [ 'UX', 'rant' ]
 ---
