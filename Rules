@@ -62,10 +62,10 @@ route '/keybase/' do
 end
 
 route "/posts/*" do
-    slug = /([^\/]+)\/?$/.match(item.identifier).captures[0]
+    post_slug = slug /([^\/]+)\/?$/.match(item.identifier).captures[0]
     year = attribute_to_time(@item[:created_at]).year
 
-    "/#{year}/#{slug}/index.html"
+    "/#{year}/#{post_slug}/index.html"
 end
 
 route '/atom/' do
