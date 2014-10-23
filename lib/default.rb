@@ -8,7 +8,7 @@ def slug str
 end
 
 def taglist tags
-    tags.map { |tag| "<a href='/tags/#{slug(tag)}'>#{tag}</a>" }.join(", ")
+    tags.map { |tag| "<a href='/tags/#{slug(tag)}/'>#{tag}</a>" }.join(", ")
 end
 
 def all_tags
