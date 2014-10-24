@@ -45,7 +45,7 @@ end
 
 compile '*' do
     if item[:extension] == 'scss'
-        filter :sass, :syntax => :scss
+            filter :sass, :syntax => :scss
     elsif item.binary? or ['css', 'txt'].include? item[:extension]
         # do nothing
     elsif ['md', 'markdown'].include? item[:extension]
@@ -80,7 +80,7 @@ route '*' do
             item.identifier.chop
         end
     elsif item[:extension] == 'scss'
-        if item.identifier[0] == '_'
+        if item.identifier[1] == '_'
             nil
         else
             item.identifier.chop + '.css'
