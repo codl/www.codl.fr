@@ -6,7 +6,7 @@ kind: article
 tags: [ 'UX', 'rant' ]
 ---
 
-<div class="wide"><img alt="It is an address form for illustration" src="http://f.codl.fr/1404/0BKNBl.png" /></div>
+<div class="wide"><img alt="It is an address form for illustration" src="//f.codl.fr/1404/0BKNBl.png" /></div>
 
 I was looking at a package I got the other day and noticed the order of the address was wrong.
 
