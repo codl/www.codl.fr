@@ -3,18 +3,22 @@
 <head>
     <meta charset="utf-8">
     <title><%= @item[:title] %></title>
-    <link rel="stylesheet" href="/style.css" />
-
-    <% if not @item[:style].nil? %>
-    <link rel="stylesheet" href="/custom_styles/<%= @item[:style] %>.css" />
-    <% end %>
+    <link data-instant-track rel="stylesheet" href="/style.css" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta property="twitter:account_id" content="4503599630855454" />
 </head>
 <body>
 
+    <% if not @item[:style].nil? %>
+    <link rel="stylesheet" href="/custom_styles/<%= @item[:style] %>.css" />
+    <% end %>
+
+
     <%= yield %>
 
+
+    <script src="/vendor/instantclick/instantclick.js" data-no-instant></script>
+    <script data-no-instant>InstantClick.init();</script>
 </body>
 </html>

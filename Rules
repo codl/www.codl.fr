@@ -57,6 +57,8 @@ compile '*' do
         filter :kramdown
         layout 'default'
         filter :cache_buster
+    elsif item[:extension] == 'js'
+        filter :uglify_js
     else
         filter :erb
         layout 'default'
@@ -98,6 +100,8 @@ route '*' do
         else
             item.identifier.chop + fingerprint(item[:filename]) + '.css'
         end
+    elsif item[:extension] == 'js'
+        item.identifier.chop + fingerprint(item[:filename]) + '.js'
     else
         item.identifier + 'index.html'
     end
