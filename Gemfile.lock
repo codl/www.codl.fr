@@ -7,7 +7,7 @@ GEM
       colored (~> 1.2)
     execjs (2.2.2)
     json (1.8.1)
-    kramdown (1.4.2)
+    kramdown (1.5.0)
     nanoc (3.7.3)
       cri (~> 2.3)
     nanoc-cachebuster (0.3.1)
