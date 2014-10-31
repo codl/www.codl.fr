@@ -8,6 +8,8 @@ GEM
     kramdown (1.4.2)
     nanoc (3.7.3)
       cri (~> 2.3)
+    nanoc-cachebuster (0.3.1)
+      nanoc (>= 3.3.0)
     sass (3.4.6)
 
 PLATFORMS
@@ -17,4 +19,5 @@ DEPENDENCIES
   builder
   kramdown
   nanoc
+  nanoc-cachebuster
   sass

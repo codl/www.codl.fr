@@ -113,16 +113,16 @@ article {
 
 @font-face{
     font-family: 'Fira Sans';
-    src: url('fira/eot/FiraSans-Regular.eot');
-    src: local('Fira Sans Regular'), url('fira/eot/FiraSans-Regular.eot') format('embedded-opentype'), url('fira/woff/FiraSans-Regular.woff') format('woff'), url('fira/ttf/FiraSans-Regular.ttf') format('truetype');
+    src: url('/fira/eot/FiraSans-Regular.eot');
+    src: local('Fira Sans Regular'), url('/fira/eot/FiraSans-Regular.eot') format('embedded-opentype'), url('/fira/woff/FiraSans-Regular.woff') format('woff'), url('/fira/ttf/FiraSans-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face{
     font-family: 'Fira Sans';
-    src: url('fira/eot/FiraSans-Bold.eot');
-    src: local('Fira Sans Bold'), url('fira/eot/FiraSans-Bold.eot') format('embedded-opentype'), url('fira/woff/FiraSans-Bold.woff') format('woff'), url('fira/ttf/FiraSans-Bold.ttf') format('truetype');
+    src: url('/fira/eot/FiraSans-Bold.eot');
+    src: local('Fira Sans Bold'), url('/fira/eot/FiraSans-Bold.eot') format('embedded-opentype'), url('/fira/woff/FiraSans-Bold.woff') format('woff'), url('/fira/ttf/FiraSans-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
 }
