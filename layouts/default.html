@@ -6,7 +6,9 @@
         <% end %>
         <h2><%= @item[:title] %></h2>
         <% if @item[:tags] %>
-        <aside id="tags">Tagged <%= taglist @item[:tags] %></aside>
+        <aside id="subtitle">Tagged <%= taglist @item[:tags] %></aside>
+        <% elsif @item[:subtitle] %>
+        <aside id="subtitle"><%= @item[:subtitle] %></aside>
         <% end %>
     </header>
     <%= yield %>

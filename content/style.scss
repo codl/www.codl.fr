@@ -8,7 +8,7 @@ html {
 }
 
 body {
-    background: #234;
+    background: $background;
     color: $glaceon-blue;
     margin: 0 1em;
     font-family: "Fira sans", sans-serif;
@@ -157,8 +157,8 @@ hr {
 ul {
     list-style: none;
     li {
-        margin-top: 1.3em;
-        line-height: 1.5em;
+        margin-top: 0.8em;
+        line-height: 2em;
     }
     text-align: left;
     margin: 3em auto;
