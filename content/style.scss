@@ -1,192 +1,75 @@
-@import 'colours';
-$max-width: 30rem;
+$text-color: #333;
+$accent: #585;
 
 html {
-    font-size: 11pt;
-    margin: 0 auto;
-    text-align: left;
-}
-
-body {
-    background: $background;
-    color: $glaceon-blue;
-    margin: 0 1em;
-    font-family: "Fira sans", sans-serif;
-}
-
-p {
-    margin: 1em 0;
-}
-
-img.avatar {
-    transform: scale(2);
-    pointer-events: none;
-}
-
-header {
-    img.avatar {
-        border: none;
-        position: absolute;
-        top: 0;
-        left: -4rem;
-        float: left;
-        max-width: 6rem;
-        padding: 0;
-    }
-    display: flex;
-    flex-direction: column;
-    overflow: none;
-    position: relative;
-    max-width: $max-width;
-    margin: 0 auto 1rem;
-    min-height: 6rem;
-    justify-content: space-around;
-    * {
-        padding-left: 3rem;
-    }
-    aside {
-        opacity: 0.5;
-        &#date {
-            padding-top: 0.5rem;
-        }
-        &#tags {
-            padding-bottom: 0.5rem;
-            a {
-                padding: 0;
-                background: transparent;
-                color: inherit;
-                &:hover {
-                    background: transparent;
-                    color: inherit;
-                    text-decoration: underline;
-                }
-            }
-        }
-    }
-    h2 {
-        vertical-align: bottom;
-        margin: 0;
-    }
-}
-
-article {
-    -moz-hyphens: auto;
-    -webkit-hyphens: auto;
-    -ms-hyphens: auto;
-    text-align: justify;
-    p:first-child {
-        text-indent: 2em;
-    }
-    &>* {
-        max-width: $max-width;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    div.wide {
-        max-width: 100%;
-        text-align: center;
-    }
-
-    ul {
-        padding: 0;
-    }
-
-    a {
-        color: inherit;
-        display: inline;
-        text-decoration: underline;
-        background: transparent;
-        padding: 0;
-        &:hover {
-            color: white;
-            background: transparent;
-        }
-        img {
-            border: 1px solid change-color($glaceon-blue, $alpha: .1);
-        }
-        &:hover img {
-            border-color: change-color($glaceon-blue, $alpha: .5);
-        }
-    }
-}
-
-
-@font-face{
-    font-family: 'Fira Sans';
-    src: url('/fira/eot/FiraSans-Regular.eot');
-    src: local('Fira Sans Regular'), url('/fira/eot/FiraSans-Regular.eot') format('embedded-opentype'), url('/fira/woff/FiraSans-Regular.woff') format('woff'), url('/fira/ttf/FiraSans-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face{
-    font-family: 'Fira Sans';
-    src: url('/fira/eot/FiraSans-Bold.eot');
-    src: local('Fira Sans Bold'), url('/fira/eot/FiraSans-Bold.eot') format('embedded-opentype'), url('/fira/woff/FiraSans-Bold.woff') format('woff'), url('/fira/ttf/FiraSans-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-}
-
-h1 {
-    font-size: 2em;
-    margin: 1em 0 .6em;
-    font-weight: 700;
-}
-
-footer {
-    max-width: $max-width;
-    margin: 1em auto;
-    a {
-        background: transparent;
-        display: inline;
-        opacity: 0.5;
-        color: inherit;
-        text-decoration: none;
-        &:hover {
-            opacity: 1;
-            background: transparent;
-        }
-    }
-}
-
-hr {
-    border-color: $glaceon-blue;
-    opacity: 0.5;
-}
-
-ul {
-    list-style: none;
-    li {
-        margin-top: 0.8em;
-        line-height: 2em;
-    }
-    text-align: left;
-    margin: 3em auto;
-    padding: 0;
-    max-width: $max-width;
+    background: #eee;
+    color: $text-color;
+    font-family: sans-serif;
+    line-height: 1.4em;
 }
 
 a {
-    background: $glaceon-blue;
-    color: $dark;
+    color: $accent;
     text-decoration: none;
-    padding: 3px;
-    &:hover {
-        background: $dark;
-        color: $glaceon-blue;
+}
+
+a:visited {
+    color: lighten($accent, 15%);
+}
+
+
+em {
+    letter-spacing: .3em; // not sure if ch is supported everywhere so, yay fallback
+    padding-left: .3em;
+    letter-spacing: .5ch;
+    padding-left: .5ch;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+section {
+    clear: both;
+    max-width: 50em;
+    margin: 10em auto;
+    position: relative;
+
+    &:before {
+        content: "\a7";
+        position: absolute;
+        left: 11rem;
+        width: 0;
+        color: $accent;
     }
-    img {
-        border: none;
+
+    h1 {
+        float: left;
+        margin: 0;
+        padding: 0;
+        font-size: 1rem;
+        font-weight: normal;
+        width: 10rem;
+        text-align: right;
+    }
+
+    p, ul {
+        margin: 2rem 0 2rem 12rem;
+    }
+
+    ul {
+        padding-left: 0;
+    }
+
+    ul li {
+        list-style: none;
+        position: relative;
+        &:before {
+            color: $accent;
+            content: "\2022";
+
+            position: absolute;
+            left: -1em;
+        }
+        margin: 1em 0;
     }
 }
 
-div#tags {
-    max-width: $max-width;
-    margin: 0 auto;
-    text-indent: 2em;
-}
-
-#instantclick-bar {
-    background: $glaceon-blue;
-    border-bottom: rgba(0,0,0,0.5) 1px solid;
-}

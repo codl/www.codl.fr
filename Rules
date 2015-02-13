@@ -14,36 +14,9 @@
 #   because “*” matches zero or more characters.
 
 
-preprocess do
-    all_tags.each do |tag|
-        items << Nanoc::Item.new(
-            "",
-            { :tag => tag },
-            "/tags/#{slug(tag)}/"
-        )
-    end
-end
-
 compile '/' do
     filter :erb
     layout 'page'
-    filter :cache_buster
-end
-
-compile '/posts/*' do
-    filter :kramdown
-    layout 'post'
-    filter :cache_buster
-end
-
-compile '/tags/*/' do
-    filter :erb
-    layout 'tags'
-    filter :cache_buster
-end
-
-compile '/atom/' do
-    filter :erb
     filter :cache_buster
 end
 
@@ -72,17 +45,6 @@ end
 
 route '/robots/' do
     '/robots.txt'
-end
-
-route "/posts/*" do
-    post_slug = slug /([^\/]+)\/?$/.match(item.identifier).captures[0]
-    year = attribute_to_time(@item[:created_at]).year
-
-    "/#{year}/#{post_slug}/index.html"
-end
-
-route '/atom/' do
-    '/atom.xml'
 end
 
 route '*' do
