@@ -13,11 +13,6 @@ a {
     text-decoration: none;
 }
 
-a:visited {
-    color: lighten($accent, 15%);
-}
-
-
 em {
     letter-spacing: .3em; // not sure if ch is supported everywhere so, yay fallback
     padding-left: .3em;
