@@ -1,11 +1,19 @@
 $text-color: #333;
 $accent: #578;
+$background: #eee;
 
 html {
-    background: #eee;
+    background: $background;
     color: $text-color;
     font-family: sans-serif;
-    line-height: 1.4em;
+    line-height: 1.4rem;
+    border-top: 1.4rem solid $accent;
+}
+
+h1, h2, h3 {
+    font-weight: normal;
+    padding: 0;
+    font-size: 1em;
 }
 
 a {
@@ -23,20 +31,40 @@ em {
 }
 
 section {
-    max-width: 50em;
-    margin: 6em auto;
+    max-width: 43em;
+    margin: 5.6rem auto;
     position: relative;
 
-    h1 {
-        padding: 0;
-        font-size: 1rem;
-        font-weight: normal;
-        margin: 2rem;
+    h1, h2 {
+        margin: 1.4rem;
         text-align: center;
     }
 
     p, ul {
-        margin: 2rem;
+        margin: 1.4rem;
+    }
+
+    div.contact-matrix {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        div.contact-method {
+            flex: 1;
+            padding: 0.7rem 1rem;
+            &:first-child { padding-top: 0; }
+            h3 {
+                margin: 0;
+                text-transform: uppercase;
+                font-size: 0.6rem;
+                opacity: 0.5;
+            }
+            a { color: inherit; }
+            .handle {
+                color: $accent;
+                text-align: center;
+            }
+
+        }
     }
 
     @media screen and (min-width: 420px) { // memes
@@ -50,33 +78,39 @@ section {
             color: $accent;
         }
 
-        h1 {
+        h1, h2 {
             margin: 0;
             float: left;
             width: 8rem;
             text-align: right;
         }
 
-        p, ul {
+        p, ul, div.contact-matrix {
             margin-left: 10rem;
         }
-    }
 
-    ul {
-        padding-left: 0;
-    }
-
-    ul li {
-        list-style: none;
-        position: relative;
-        &:before {
-            color: $accent;
-            content: "\2022";
-
-            position: absolute;
-            left: -1em;
+        div.contact-matrix {
+            align-items: flex-start;
+            div.contact-method {
+                padding: 0.7rem 0;
+                .handle { text-align: left; }
+            }
         }
-        margin: 1em 0;
+
+        @media screen and (min-width: 550px) {
+            div.contact-matrix {
+                flex-direction: row;
+                text-align: left;
+                div.contact-method {
+                    padding: 0;
+
+                    border: 1px rgba(0,0,0,0.2);
+                    //border-left-style: solid;
+                    &:first-child { border-left-style: none; }
+                    .handle { text-align: left }
+                }
+            }
+        }
     }
 }
 
@@ -89,7 +123,7 @@ footer {
         max-width: 33%;
         path {
             fill: $accent;
-            opacity: .4;
+            opacity: .7;
         }
     }
 }
