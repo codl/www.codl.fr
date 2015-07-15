@@ -4,55 +4,59 @@ https://keybase.io/codl
 
 I hereby claim:
 
-  * I am an admin of http://www.codl.fr
+  * I am an admin of https://www.codl.fr
   * I am codl (https://keybase.io/codl) on keybase.
-  * I have a public key with fingerprint 2584 559B AA84 7C42 1457  EA46 07E4 1C79 CF84 A61F
+  * I have a public key with fingerprint 4E69 CA38 BA02 E860 6FA0  D78B ED23 2F64 BC5A 4983
 
-To claim this, I am signing this object:
+To do so, I am signing this object:
 
 {
     "body": {
         "key": {
-            "fingerprint": "2584559baa847c421457ea4607e41c79cf84a61f",
+            "fingerprint": "4e69ca38ba02e8606fa0d78bed232f64bc5a4983",
             "host": "keybase.io",
-            "key_id": "07e41c79cf84a61f",
+            "key_id": "ed232f64bc5a4983",
+            "kid": "01014ae2acbd249770759bb216f7452381c63bf30bd13507500f8ddb0b28ee54f3f80a",
             "uid": "c0eaa6d4ed1f4251a004ff1bee433a00",
             "username": "codl"
         },
         "service": {
             "hostname": "www.codl.fr",
-            "protocol": "http:"
+            "protocol": "https:"
         },
         "type": "web_service_binding",
         "version": 1
     },
-    "ctime": 1408025909,
+    "ctime": 1436985759,
     "expire_in": 157680000,
-    "prev": "cf98f8efc63c85d6225ecf52022ffe8be03a272973e811d95714e67d78a78b31",
-    "seqno": 9,
+    "prev": "47e27ab7d99af472058092bff119fdd657bcc710a1aae09a412bffeb67ed11a1",
+    "seqno": 14,
     "tag": "signature"
 }
 
-with the aforementioned key, yielding the PGP signature:
+which yields the signature:
 
 -----BEGIN PGP MESSAGE-----
-Version: GnuPG v2
+Version: Keybase OpenPGP v2.0.20
+Comment: https://keybase.io/crypto
 
-owFtkV1IFFEUx3f9yDRFS4QEibp9LJasM7N3Pgv7QMRAJPVBCHS5M3PvOmk7u7Pj
-rqJr+WAfmuAXPdlLIIKQJIlYohUYxUZPgj1YkmJpVmQPYVlmM2Jv3ZfLOef3/59z
-OF1p8Y445+P0qVjmp/KHzpdPvsiOis/PTjUBWVcbgdQEavH2RzS/DxsBQ/ObQAIM
-K0CWFWWEBMgrkKEhy2MEOYrHkFZ4USECRBxNQB6o0UO2wrKRUQi7Nd3KWYFXU63s
-f/j67YJCYYQ4FWKVJpBhaURRkBBaxhh6PFZggyFs+NFlbNO6WgeiecDKhDUF2/Pa
-bXeqkUjEbRNuYliygKGbuqLXWYUa0wxIts5sDGyDWPbuWHhlza9aK1uCMDZCmu4H
-Em2RiqnZnjSkBIphRUrMA7ghoBnYq9kEy3MCZT27DQ7bkxFRIAImCudRBFblGIbF
-CmEZimEIwYKMKQ9ieEbkPVigaVVkeRpijld5AfGC7KGBvVTQrwPJ6mQin2UZ0nx+
-ZNYbGERTbjpzEhzOOMeuxDj7ao6U5Ix/t2y5nbR5QFnzvVtHmvDne/6e2EiwM1y5
-EEsLLquVV1NXS2PXp0l08qirTM9qH11POTZnDDXkstlvis5dSn1ecHo8Y3FqjQrs
-yxh3P5U6jl+s6E5a+NUVvBIcm1k8/LE5fbb4lVgV2jufOODKPpvzovLkV2VE7it3
-w6rqDXo9Yau9vjSpv/la4duCmb6tn0ckHrWOFH/7oN/6bc4vKUsrE8KhohsPomDW
-6C404+fK4vNdpVFyouRCZLpndHj3/t6V/OX3Cz82cmlc0ubt5Tyvwx092fdbhjNb
-cTT5Ueemu3+QK2uumjx4fm2stg+eKRq8u0pa741mtTmHBibZiTvVfwE=
-=SSVC
+yMIXAnicbVJbSBVBGD7HSxdJMDISk8iNwOpgs/fdE6bgQ/hQdjM1gmVmZ1Y3T2dP
+e1bNzG4kUgaBIZkkQkVkHgoiKxPLsgdDughZqdEFojK6aZkUZs2KvTUvw/9/l3++
+4b8bH+2J8wae9hxe1LfE7+29nVHqyTvX0lzJIAtXMP5KpoRMXYYZLCJ2yDaDDuNn
+BCKpOuQVBAFHFAlIBgRYVhDBHM8ZkoB0EQqqwjM+ptgKuwpqg2CYpJsW7dFCMzHt
+/odfMgUAFrACJBzUEeYEVZaBLKoIcaxkyILI8QqrSzwyeIAwy4sUBMBQMEYAcQoh
+omDwhgIgtSudstMBgVDCAsGsIXAiCwEQDINFhAg8TwuXGCZ2EO4gLtvCAabKx9BO
+makTN76bYhotLy9Pdxnphk1lIdtyLN0KUKDYcUJhvyt0KkJTTIK0aQ8NmUFMv5Aq
+yogdNq0g42cpU3dM15QVeElVRJrRx5BdIdMmmukyRFlSAD3uHFLmfrxMOBkiGasq
+NASZA6ICVA7RLKxqYCyJMtJ1mQWQhZAAFQqsCxIkyTQ6C1nGTbUzaLkj6TthEfUM
+m0VB6JTahKm607UtxuON88yIjXK3wBM3O+Hfboy/nzmZKc9t6K735hU0pgyORG/J
+4nPN/e9qW7e+y2OkZnSzZqHvQuLebEcri2hdAxkH0uafzP82CFZvKMype9k2EHX8
+ev/Zjq7bbWlvwiPDQ6+9Pb+zn7c/Zh7eQKEjayKj209hIX/5pN3ZMRpb8HGtdvKT
+d/GcpN6G6sqEY7v7v98Y+jP+svbEMzl+w6WczzXaRGTjC619bNGXxqSGSNOq/KVW
+yqGtmyJ7rORXVWeaU48mr4i6Vfgg/nXr1TtD3ZtvCffmPZp5et+H4bHo6mVZEzVP
+Eioi5OJbszOxsCem5WDfjyuNyc0/z896u+7ar9KxmyWZXfWXFwSaOupqr628nzqY
+uwev//oXF88xMQ==
+=AbM+
 -----END PGP MESSAGE-----
 
 And finally, I am proving ownership of this host by posting or
@@ -61,4 +65,3 @@ appending to this document.
 View my publicly-auditable identity here: https://keybase.io/codl
 
 ==================================================================
-
