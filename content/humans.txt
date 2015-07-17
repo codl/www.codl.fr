@@ -1,0 +1,27 @@
+# The author
+
+Author: codl (Corentin Delcourt) <codl@codl.fr>
+Pronouns: he/him <http://pronoun.is/he/him>
+Likes: Computer networks
+Dislikes: Broken computer networks
+Favourite pizza: The one from Domino's with the barbecue sauce base layer,
+                 cheese, and like five different kinds of meat
+Opinion on cold pizza: It is bad
+Internet profiles: <https://twitter.com/codl>
+                   <https://github.com/codl>
+                   <http://codl.deviantart.com/>
+                   <http://codldoodl.tumblr.com/>
+                   <http://codlplus.tumblr.com/>
+                   <http://www.last.fm/users/codl/>
+                   <https://www.thisismyjam.com/codl>
+                   <http://twitch.tv/codl_>
+                   <http://hitbox.tv/codl>
+                   <https://keybase.io/codl>
+
+# The website
+
+Technologies used: HTML, CSS, nanoc, Google Analytics
+Served by: Nginx
+Proxied through: Cloudflare
+License: Apache-2.0, except the embedded SVG which is Creative Commons CC-BY-4.0
+Source code: <https://github.com/codl/www.codl.fr>

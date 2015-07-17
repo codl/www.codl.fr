@@ -39,6 +39,10 @@ compile '*' do
     end
 end
 
+route '/humans/' do
+    '/humans.txt'
+end
+
 route '/keybase/' do
     '/keybase.txt'
 end

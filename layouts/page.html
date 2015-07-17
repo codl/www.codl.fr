@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title><%= @item[:title] %></title>
     <link rel="stylesheet" href="/style.css" />
+    <link rel="author" href="/humans.txt" />
 
     <% if not @item[:style].nil? %>
     <link rel="stylesheet" href="/custom_styles/<%= @item[:style] %>.css" />
