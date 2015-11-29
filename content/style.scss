@@ -119,11 +119,7 @@ footer {
     margin: 5em auto;
     max-width: 50em;
     text-align: center;
-    svg {
+    img {
         max-width: 33%;
-        path {
-            fill: $accent;
-            opacity: .7;
-        }
     }
 }
