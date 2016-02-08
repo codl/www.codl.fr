@@ -2,6 +2,7 @@
 
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
+    shell = require('gulp-shell'),
     del = require('del');
 
 gulp.task('clean', function(){
@@ -33,6 +34,17 @@ gulp.task('watch', function (){
     gulp.watch(['assets/**/*', '!assets/**/*.scss'], ['misc-assets']);
 });
 
-gulp.task('default', ['clean'], function(){
-gulp.start('content', 'assets');
+gulp.task('default', ['clean-then-all']);
+
+gulp.task('all', ['content', 'assets']);
+
+gulp.task('clean-then-all', ['clean'], function(){
+    return gulp.start('all');
+});
+
+gulp.task('deploy', ['clean-then-all'], function(){
+    return gulp.src('output/')
+        .pipe(shell([
+            'rsync -ai --delete-after output/ ana.codl.fr:/srv/www.codl.fr'
+        ]));
 });
