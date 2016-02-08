@@ -1,125 +1,56 @@
-$text-color: #333;
-$accent: #578;
-$background: #eee;
-
 html {
-    background: $background;
-    color: $text-color;
-    font-family: sans-serif;
-    line-height: 1.4rem;
-    border-top: 1.4rem solid $accent;
+    background: black;
+    font-family: Ubuntu, sans-serif;
+    color: white;
+    font-size: 18px;
 }
 
-h1, h2, h3 {
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+}
+
+header {
+    margin: 0;
+    min-height: 22rem;
+    background: url("nebula.jpeg") center center, #27152D;
+    background-size: cover;
+    position: relative;
+
+    .top, .bottom {
+        position: absolute;
+        width: 100%;
+        background: rgba(0,0,0,0.3);
+        height: 3em;
+        line-height: 1em;
+    }
+    .top { top: 0; }
+    .bottom { bottom: 0; }
+}
+
+h1, section {
+    max-width: 30rem;
+    font-size: 1rem;
     font-weight: normal;
-    padding: 0;
-    font-size: 1em;
+    margin: 1em auto;
+    padding: 0 2em;
+}
+
+h1 {
+    margin: 0 auto;
+    padding: 1em 2em;
 }
 
 a {
-    color: $accent;
+    color: #F17EA5;
     text-decoration: none;
 }
 
-em {
-    letter-spacing: .3em; // not sure if ch is supported everywhere so, yay fallback
-    padding-left: .3em;
-    letter-spacing: .5ch;
-    padding-left: .5ch;
-    font-style: italic;
-    text-transform: uppercase;
-}
-
-section {
-    max-width: 43em;
-    margin: 5.6rem auto;
-    position: relative;
-
-    h1, h2 {
-        margin: 1.4rem;
-        text-align: center;
-    }
-
-    p, ul {
-        margin: 1.4rem;
-    }
-
-    div.contact-matrix {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        div.contact-method {
-            flex: 1;
-            padding: 0.7rem 1rem;
-            &:first-child { padding-top: 0; }
-            h3 {
-                margin: 0;
-                text-transform: uppercase;
-                font-size: 0.6rem;
-                opacity: 0.5;
-            }
-            a { color: inherit; }
-            .handle {
-                color: $accent;
-                text-align: center;
-            }
-
-        }
-    }
-
-    @media screen and (min-width: 420px) { // memes
-        clear: both;
-
-        &:before {
-            content: "\a7";
-            position: absolute;
-            left: 9rem;
-            width: 0;
-            color: $accent;
-        }
-
-        h1, h2 {
-            margin: 0;
-            float: left;
-            width: 8rem;
-            text-align: right;
-        }
-
-        p, ul, div.contact-matrix {
-            margin-left: 10rem;
-        }
-
-        div.contact-matrix {
-            align-items: flex-start;
-            div.contact-method {
-                padding: 0.7rem 0;
-                .handle { text-align: left; }
-            }
-        }
-
-        @media screen and (min-width: 550px) {
-            div.contact-matrix {
-                flex-direction: row;
-                text-align: left;
-                div.contact-method {
-                    padding: 0;
-
-                    border: 1px rgba(0,0,0,0.2);
-                    //border-left-style: solid;
-                    &:first-child { border-left-style: none; }
-                    .handle { text-align: left }
-                }
-            }
-        }
-    }
-}
-
-
-footer {
-    margin: 5em auto;
-    max-width: 50em;
-    text-align: center;
-    img {
-        max-width: 33%;
-    }
+.container {
+    margin: 3em 0;
 }
