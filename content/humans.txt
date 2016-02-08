@@ -2,6 +2,7 @@
 
 Author: codl <codl@codl.fr>
 Pronouns: they/them <http://pronoun.is/they/them>
+          he/him <http://pronoun.is/he/him> is also fine
 Likes: Computer networks
 Dislikes: Unreliable computer networks
 Favourite pizza: The one from Domino's with the barbecue sauce base layer,
@@ -18,8 +19,9 @@ Internet profiles: <https://twitter.com/codl>
 
 # The website
 
-Technologies used: HTML, CSS, nanoc, Google Analytics
+Technologies used: HTML, CSS, gulp
 Served by: Nginx
-Proxied through: Cloudflare
-License: Apache-2.0, except the embedded SVG which is Creative Commons CC-BY-4.0
+In: Roubaix, France
+Proxied through: CloudFlare
+License: Apache-2.0, except /ident.svg which is Creative Commons CC-BY-4.0
 Source code: <https://github.com/codl/www.codl.fr>
