@@ -42,8 +42,7 @@ gulp.task('sass', ['misc-assets'], function (){
 });
 
 gulp.task('watch', function (){
-    gulp.watch('./content/**/*', ['content']);
-    gulp.watch('assets/**/*', ['assets']);
+    gulp.watch(['assets/**/*', 'content/**/*'], ['content']);
 });
 
 gulp.task('default', ['clean-then-all']);

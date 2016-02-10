@@ -21,6 +21,7 @@ header {
     background: url("nebula.jpeg") center center, #27152D;
     background-size: cover;
     position: relative;
+    overflow: hidden;
 
     .top, .bottom {
         position: absolute;
@@ -28,6 +29,7 @@ header {
         background: rgba(0,0,0,0.3);
         height: 3em;
         line-height: 1em;
+        z-index: 10;
     }
     .top { top: 0; }
     .bottom { bottom: 0; }
@@ -53,4 +55,21 @@ a {
 
 .container {
     margin: 3em 0;
+}
+
+.cath {
+    background: url("cath.png") no-repeat top left;
+    background-size: contain;
+    animation: float 2s alternate infinite ease-in-out;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+}
+
+@keyframes float {
+    to{
+        transform: translateY(1em);
+    }
 }
