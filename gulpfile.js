@@ -56,6 +56,6 @@ gulp.task('clean-then-all', ['clean'], function(){
 gulp.task('deploy', ['clean-then-all'], function(){
     return gulp.src('output/')
         .pipe(shell([
-            'rsync -ai --delete-after output/ ana.codl.fr:/srv/www.codl.fr'
+            'rsync -ai --no-times --delete-after output/ ana.codl.fr:/srv/www.codl.fr'
         ]));
 });
