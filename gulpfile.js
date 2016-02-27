@@ -17,7 +17,7 @@ gulp.task('assets', ['sass', 'misc-assets']);
 gulp.task('misc-assets', function(){
     return gulp.src(['assets/**/*', '!assets/**/*.scss'])
         .pipe(cachebust.resources())
-        .pipe(gulp.dest('output'));
+        .pipe(gulp.dest('output/assets'));
 });
 
 gulp.task('misc-content', ['assets'], function(){
@@ -38,7 +38,7 @@ gulp.task('sass', ['misc-assets'], function (){
         .pipe(sass().on('error', sass.logError))
         .pipe(cachebust.references())
         .pipe(cachebust.resources())
-        .pipe(gulp.dest('output'));
+        .pipe(gulp.dest('output/assets'));
 });
 
 gulp.task('watch', function (){
