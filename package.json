@@ -4,7 +4,10 @@
     "gulp": "^3.9.0",
     "gulp-cachebust": "0.0.6",
     "gulp-haml": "^0.1.6",
+    "gulp-rename": "^1.2.2",
+    "gulp-revert-path": "^1.2.1",
     "gulp-sass": "^2.2.0",
-    "gulp-shell": "^0.5.2"
+    "gulp-shell": "^0.5.2",
+    "imagemin-webp": "^3.1.1"
   }
 }

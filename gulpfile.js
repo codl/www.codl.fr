@@ -1,22 +1,37 @@
 'use strict';
 
-var gulp = require('gulp'),
+const gulp = require('gulp'),
     sass = require('gulp-sass'),
     shell = require('gulp-shell'),
     haml = require('gulp-haml'),
     cachebust = new require('gulp-cachebust')(),
-    del = require('del');
+    del = require('del'),
+    webp = require('imagemin-webp'),
+    revertPath = require('gulp-revert-path'),
+    rename = require("gulp-rename");
 
 gulp.task('clean', function(){
     return del(['output/*']);
 });
 
 gulp.task('content', ['haml', 'misc-content']);
-gulp.task('assets', ['sass', 'misc-assets']);
+gulp.task('assets', ['sass', 'webp', 'misc-assets']);
 
 gulp.task('misc-assets', function(){
     return gulp.src(['assets/**/*', '!assets/**/*.scss'])
         .pipe(cachebust.resources())
+        .pipe(gulp.dest('output/assets'));
+});
+
+gulp.task('webp', function(){
+    return gulp.src(['assets/**/*.{jpeg,jpg,png}'])
+        .pipe(cachebust.resources())
+        .pipe(webp()())
+        .pipe(revertPath())
+        .pipe(rename(function(p){
+                p.extname += ".webp";
+                return p;
+            }))
         .pipe(gulp.dest('output/assets'));
 });
 
