@@ -21,6 +21,5 @@ Internet profiles: <https://twitter.com/codl>
 Technologies used: HTML, CSS, gulp
 Served by: Nginx
 In: Roubaix, France
-Proxied through: CloudFlare
 License: Apache-2.0, except /nebula.jpeg which is Creative Commons CC-BY-4.0
 Source code: <https://github.com/codl/www.codl.fr>
