@@ -2,7 +2,6 @@
 
 Author: codl <codl@codl.fr>
 Pronouns: they/them <http://pronoun.is/they/them>
-          he/him <http://pronoun.is/he/him> is also fine
 Likes: Computer networks
 Dislikes: Unreliable computer networks
 Favourite pizza: The one from Domino's with the barbecue sauce base layer,
