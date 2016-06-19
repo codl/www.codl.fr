@@ -5,9 +5,16 @@
     "gulp-cachebust": "0.0.6",
     "gulp-haml": "^0.1.6",
     "gulp-rename": "^1.2.2",
+    "gulp-rev": "^7.0.0",
     "gulp-revert-path": "^1.2.1",
     "gulp-sass": "^2.2.0",
     "gulp-shell": "^0.5.2",
     "imagemin-webp": "^3.1.1"
+  },
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-rev": "^7.1.0",
+    "gulp-rsync": "0.0.6",
+    "gulp-sass": "^2.3.2"
   }
 }
