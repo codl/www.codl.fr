@@ -16,12 +16,12 @@ gulp.task('clean', function(){
 gulp.task('content', ['haml', 'misc-content']);
 gulp.task('assets', ['sass', 'webp', 'misc-assets']);
 
-gulp.task('misc-assets', function(){
+gulp.task('misc-assets', ['clean'], function(){
     return gulp.src(['assets/**/*', '!assets/**/*.scss'])
         .pipe(gulp.dest('output/assets'));
 });
 
-gulp.task('webp', function(){
+gulp.task('webp', ['clean'], function(){
     return gulp.src(['assets/**/*.{jpeg,jpg,png}'])
         .pipe(webp()())
         .pipe(revertPath())
@@ -32,18 +32,18 @@ gulp.task('webp', function(){
         .pipe(gulp.dest('output/assets'));
 });
 
-gulp.task('misc-content', ['assets'], function(){
+gulp.task('misc-content', ['clean', 'assets'], function(){
     return gulp.src(['content/**/*', '!content/**/*.haml'])
         .pipe(gulp.dest('output'));
 });
 
-gulp.task('haml', ['assets'], function(){
+gulp.task('haml', ['clean', 'assets'], function(){
     return gulp.src('content/**/*.haml')
         .pipe(haml())
         .pipe(gulp.dest('output'));
 });
 
-gulp.task('sass', ['misc-assets'], function (){
+gulp.task('sass', ['clean', 'misc-assets'], function (){
     return gulp.src('./assets/**/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('output/assets'));
@@ -53,17 +53,13 @@ gulp.task('watch', function (){
     gulp.watch(['assets/**/*', 'content/**/*'], ['content']);
 });
 
-gulp.task('default', ['clean-then-all']);
+gulp.task('default', ['all']);
 
 gulp.task('all', ['content', 'assets']);
 
-gulp.task('clean-then-all', ['clean'], function(){
-    return gulp.start('all');
-});
-
-gulp.task('deploy', ['clean-then-all'], function(){
+gulp.task('deploy', ['all'], function(){
     return gulp.src('output/')
         .pipe(shell([
-            'rsync -ai --no-times --delete-after output/ ana.codl.fr:/srv/www.codl.fr'
+            'rsync -ai --no-times --delete-after output/ slyme.codl.fr:/srv/http/www.codl.fr'
         ]));
 });
