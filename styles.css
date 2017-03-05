@@ -1,0 +1,39 @@
+body {
+    color: #333;
+    background-color: white;
+    margin: 0;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+body > * > * {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: 35rem;
+}
+
+header {
+    padding-top: 4em;
+    background-color: #E5005A;
+    color: white;
+}
+
+a {
+    color: #d20052;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #d85387;
+}
+
+.bio {
+    line-height: 1.5em;
+}
+
+.bio ul {
+    list-style: none;
+}
+
