@@ -29,11 +29,11 @@ a:visited {
     color: #d85387;
 }
 
-.bio {
+section {
     line-height: 1.5em;
 }
 
-.bio ul {
+section ul {
     list-style: none;
 }
 
