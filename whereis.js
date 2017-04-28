@@ -7,5 +7,5 @@ fetch("https://twitter-whereis.glitch.me/codl").then(res => {
         throw "frick!";
     }
 }).then(json => {
-    document.querySelector("#whereis").textContent = json.full_name.toLowerCase();
+    document.querySelector("#whereis").textContent = json.full_name;
 }).catch(noop)
