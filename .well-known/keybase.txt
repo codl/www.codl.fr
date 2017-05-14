@@ -13,12 +13,18 @@ To do so, I am signing this object:
 {
     "body": {
         "key": {
+            "eldest_kid": "01014ae2acbd249770759bb216f7452381c63bf30bd13507500f8ddb0b28ee54f3f80a",
             "fingerprint": "4e69ca38ba02e8606fa0d78bed232f64bc5a4983",
             "host": "keybase.io",
             "key_id": "ed232f64bc5a4983",
             "kid": "01014ae2acbd249770759bb216f7452381c63bf30bd13507500f8ddb0b28ee54f3f80a",
             "uid": "c0eaa6d4ed1f4251a004ff1bee433a00",
             "username": "codl"
+        },
+        "revoke": {
+            "sig_ids": [
+                "1d2d8655b4b9dcd0a34dd001b449bbdf864d834b8538885dacb7ed48903073520f"
+            ]
         },
         "service": {
             "hostname": "www.codl.fr",
@@ -27,36 +33,37 @@ To do so, I am signing this object:
         "type": "web_service_binding",
         "version": 1
     },
-    "ctime": 1436985759,
+    "ctime": 1494755671,
     "expire_in": 157680000,
-    "prev": "47e27ab7d99af472058092bff119fdd657bcc710a1aae09a412bffeb67ed11a1",
-    "seqno": 14,
+    "prev": "df575d287a2515e46910c55b18a197dc76ffe4365429167bbb09cb63cabc9d8d",
+    "seqno": 26,
     "tag": "signature"
 }
 
 which yields the signature:
 
 -----BEGIN PGP MESSAGE-----
-Version: Keybase OpenPGP v2.0.20
+Version: Keybase OpenPGP v2.0.70
 Comment: https://keybase.io/crypto
 
-yMIXAnicbVJbSBVBGD7HSxdJMDISk8iNwOpgs/fdE6bgQ/hQdjM1gmVmZ1Y3T2dP
-e1bNzG4kUgaBIZkkQkVkHgoiKxPLsgdDughZqdEFojK6aZkUZs2KvTUvw/9/l3++
-4b8bH+2J8wae9hxe1LfE7+29nVHqyTvX0lzJIAtXMP5KpoRMXYYZLCJ2yDaDDuNn
-BCKpOuQVBAFHFAlIBgRYVhDBHM8ZkoB0EQqqwjM+ptgKuwpqg2CYpJsW7dFCMzHt
-/odfMgUAFrACJBzUEeYEVZaBLKoIcaxkyILI8QqrSzwyeIAwy4sUBMBQMEYAcQoh
-omDwhgIgtSudstMBgVDCAsGsIXAiCwEQDINFhAg8TwuXGCZ2EO4gLtvCAabKx9BO
-makTN76bYhotLy9Pdxnphk1lIdtyLN0KUKDYcUJhvyt0KkJTTIK0aQ8NmUFMv5Aq
-yogdNq0g42cpU3dM15QVeElVRJrRx5BdIdMmmukyRFlSAD3uHFLmfrxMOBkiGasq
-NASZA6ICVA7RLKxqYCyJMtJ1mQWQhZAAFQqsCxIkyTQ6C1nGTbUzaLkj6TthEfUM
-m0VB6JTahKm607UtxuON88yIjXK3wBM3O+Hfboy/nzmZKc9t6K735hU0pgyORG/J
-4nPN/e9qW7e+y2OkZnSzZqHvQuLebEcri2hdAxkH0uafzP82CFZvKMype9k2EHX8
-ev/Zjq7bbWlvwiPDQ6+9Pb+zn7c/Zh7eQKEjayKj209hIX/5pN3ZMRpb8HGtdvKT
-d/GcpN6G6sqEY7v7v98Y+jP+svbEMzl+w6WczzXaRGTjC619bNGXxqSGSNOq/KVW
-yqGtmyJ7rORXVWeaU48mr4i6Vfgg/nXr1TtD3ZtvCffmPZp5et+H4bHo6mVZEzVP
-Eioi5OJbszOxsCem5WDfjyuNyc0/z896u+7ar9KxmyWZXfWXFwSaOupqr628nzqY
-uwev//oXF88xMQ==
-=AbM+
+yMJnAnicrVJdbBVFFL4VtFhibMJLUwxpBmok1jr/O7uxyAMJ+EBC1ECQktuZnZne
+pZfdy+7trZXcEG1i0xhJY6Lg34tEYojwgFWgEAQ0gQQCVjAGFAKIpiZI/YsPxb/Z
+G3zj0XmZnDnf+c53vjmfPzCn0NJU/vrU2KKpxUHT6eMzg4X1bUvXbQUq0cMg2AoG
+TOMyZW2yanEg0iAAEEFEpcEyVBpT3/Ogx3ylMOLWowwTgUJOlCVQaUSYS0JohdYK
+KiyMYdQSK6AEXcBGcb9JK2kUVx0tNdwPJRFKQmwEh9xKqD2hjMYEW05VyCT1BXGF
+pSTLK5w4JTPTHSXuzQXFhry74P9n3YMNuhAaKbmmRiNLMUMSQmotUsZQQlyQAzOT
+xnKzydGJLoN6F0hNLRkwuadZ1O8EZyDYAJDGWnDGFFW+DjWUhGoNIVKUOoHaCk61
+IFQJRoQQTLsJPKOp8CGBHmEYWrDRcbtutShskOcO3ek8NDTUnXfvtqmTVEmTahIm
+ZZcoVauVLMhFVYcrDaRRxTscRRXF2n2Pq6iZNIuSGATIIcNqlJMi6lOPMe6hLmCe
+r0SpKUY5gnlcQHfyPqbmKLVlHtNYeNI5xAzlPoKhGxQJiXxPhx631vnFGcU+4p5S
+Cvqh4iSUKvS10CCfakucgABzp1P2O05nXCyrg6kB9RPHeucWmloK9917T763hZb7
+W//b5tJY818L3+9sXjN+9bElcE1t96G2s9+X3/sn+AWfWLv/wHMHK/PZikvLdn3b
+8+y2l17Z8WA6vXE2+XV29pvJgZ9Gr98mC2D35Q/3bL/cDidGm8n59a/3fXruoXd7
+eqd7wtJXs/GT2z7qJT+Mdn73xcjkgo+37zt56UL9E3arY+2pt/cOlwf/PPM4rveN
+//37C0f1a6++bEbqP+N1q0vHO1eNz5RGLhy5uWHqGg7AivJTHW1XosVPPDLxx2+7
+3mgtzG2/fXrG0B788JVFE2+1vjmnTd08tnTi/LlHP9i5Kamcjd85U0nU5MX26/tZ
+uOPGjdU7Pxs7vAXueebW0z+m2fLlU9PR1b0rX9zdN2/flyc7/gWwHl6P
+=ogka
 -----END PGP MESSAGE-----
 
 And finally, I am proving ownership of this host by posting or
@@ -65,3 +72,4 @@ appending to this document.
 View my publicly-auditable identity here: https://keybase.io/codl
 
 ==================================================================
+
