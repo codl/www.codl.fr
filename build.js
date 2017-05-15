@@ -18,5 +18,6 @@ weh(async site => {
         ]
     })
     site.use(require('weh-gzip'));
+    site.use(require('weh-brotli'));
     return site;
 });
