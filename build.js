@@ -1,7 +1,10 @@
 const weh = require('@weh/weh');
 const rm = require('rm-r/sync');
 
-rm('_site');
+try {
+    rm('_site');
+}
+catch (Exception) {}
 
 weh(async site => {
     site.config({
