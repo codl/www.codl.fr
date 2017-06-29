@@ -1,0 +1,10 @@
+greetings human we come in peace lol
+
+jokes aside hi welcome to the back side of my web site
+
+it's a tiny flask app that doesnt really do much but i got tired of
+limiting myself to static site generators so i made this
+
+it's on github <https://github.com/codl/www.codl.fr>
+
+anyway i hope you have a nice and peaceful day. much love
