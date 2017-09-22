@@ -14,14 +14,6 @@
         <script async src="https://beacon.codl.fr/s"></script>
     </head>
     <body>
-        <header>
-            {% if pages -%}
-                {% for page in pages -%}
-                    <a rel="{{page.rel}}" href="{{page.href}}">{{page.title}}</a>
-                {% endfor -%}
-            {% endif %}
-            <h1>{{ title or "codl" }}</h1>
-        </header>
         <section>
             {% block body %}
             {% endblock %}
