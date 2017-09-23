@@ -56,7 +56,7 @@ blockquote cite em {
 }
 
 em.codl {
-    background-image: linear-gradient(to top left, red, magenta);
+    background-image: linear-gradient(-30deg, #f30, #f0a);
     color: white;
     font-style: normal;
     padding: 0.1em 0.2em;
