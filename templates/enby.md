@@ -1,5 +1,3 @@
-## non-binary
-
 > relating to or being a person who identifies
 > with or expresses a gender identity that is
 > neither entirely male nor entirely female

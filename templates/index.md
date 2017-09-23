@@ -1,6 +1,6 @@
 hey there
 
-i'm *codl*, a software developer from quimper, france
+i'm <em class='codl'>codl</em>, a software developer from quimper, france
 
 i'm [non-binary][]. please use [they][] when referring to me
 

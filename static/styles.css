@@ -45,12 +45,19 @@ section ul {
     list-style: none;
 }
 
-blockquote {
-    font-family: serif;
-}
-
 blockquote cite {
     text-align: right;
     display: block;
     font-style: italic;
+}
+
+blockquote cite em {
+    font-style: normal;
+}
+
+em.codl {
+    background-image: linear-gradient(to top left, red, magenta);
+    color: white;
+    font-style: normal;
+    padding: 0.1em 0.2em;
 }
