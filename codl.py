@@ -9,9 +9,4 @@ def index():
     return render_markdown('index.md')
 
 
-@app.route('/enby')
-def enby():
-    return render_markdown('enby.md', title='non-binary')
-
-
 import plumbing

@@ -11,21 +11,21 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
+    align-items: stretch;
     min-height: 100vh;
-}
-
-body > *:only-child {
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-body > * > * {
+    line-height: 1.5em;
+    max-width: 34rem;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    max-width: 34rem;
+}
+
+div.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 3em 0;
 }
 
 a {
@@ -37,27 +37,38 @@ a:visited {
     color: #d85387;
 }
 
-section {
-    line-height: 1.5em;
-}
-
-section ul {
-    list-style: none;
-}
-
-blockquote cite {
-    text-align: right;
-    display: block;
-    font-style: italic;
-}
-
-blockquote cite em {
-    font-style: normal;
-}
-
 em.codl {
     background-image: linear-gradient(-30deg, #f30, #f0a);
     color: white;
     font-style: normal;
     padding: 0.1em 0.2em;
+}
+
+footer {
+    color: #999;
+}
+footer a,
+footer a:visited {
+    text-decoration: underline;
+    color: inherit;
+}
+
+.testimonial blockquote {
+    font-size: 3em;
+    opacity: 0.5;
+    text-align: center;
+    margin: 2rem 0;
+}
+.testimonial blockquote:before {
+    content: open-quote;
+}
+.testimonial blockquote:after {
+    content: close-quote;
+}
+
+.testimonial figcaption {
+    text-align: right;
+}
+.testimonial figcaption aside {
+    font-size: 0.8em;
 }

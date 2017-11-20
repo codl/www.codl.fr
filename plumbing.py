@@ -5,6 +5,8 @@ legacy redirects and hacky routing
 from codl import app
 from flask import redirect, url_for, abort
 import os
+import yaml
+import random
 
 @app.route('/herd.html')
 def redir_herd():
@@ -40,3 +42,12 @@ def cachebust_url_for(endpoint, **kwargs):
         kwargs['timestamp'] = int(os.stat(path).st_mtime)
     return url_for(endpoint, **kwargs)
 
+
+_testimonials = None
+@app.context_processor
+def inject_testimonial():
+    global _testimonials
+    if not _testimonials:
+        with open('data/testimonials.yml') as f:
+            _testimonials = yaml.load(f)
+    return dict(testimonial = random.choice(_testimonials))
