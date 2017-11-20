@@ -13,10 +13,13 @@ body {
     justify-content: space-around;
     align-items: stretch;
     min-height: 100vh;
-    line-height: 1.5em;
     max-width: 34rem;
     margin-left: auto;
     margin-right: auto;
+}
+
+body p {
+    line-height: 1.5em;
 }
 
 div.main {
@@ -26,6 +29,10 @@ div.main {
     justify-content: space-around;
     align-items: center;
     margin: 3em 0;
+}
+
+div.main, footer {
+    padding: 1rem;
 }
 
 a {
@@ -51,6 +58,10 @@ footer a,
 footer a:visited {
     text-decoration: underline;
     color: inherit;
+}
+
+figure.testimonial {
+    margin: 0;
 }
 
 .testimonial blockquote {
