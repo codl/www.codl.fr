@@ -50,36 +50,3 @@ em.codl {
     font-style: normal;
     padding: 0.1em 0.2em;
 }
-
-footer {
-    color: #999;
-}
-footer a,
-footer a:visited {
-    text-decoration: underline;
-    color: inherit;
-}
-
-figure.testimonial {
-    margin: 0;
-}
-
-.testimonial blockquote {
-    font-size: 3em;
-    opacity: 0.5;
-    text-align: center;
-    margin: 2rem 0;
-}
-.testimonial blockquote:before {
-    content: open-quote;
-}
-.testimonial blockquote:after {
-    content: close-quote;
-}
-
-.testimonial figcaption {
-    text-align: right;
-}
-.testimonial figcaption aside {
-    font-size: 0.8em;
-}

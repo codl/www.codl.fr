@@ -20,19 +20,5 @@
                 {% endblock %}
             </section>
         </div>
-        <footer>
-            <figure class="testimonial">
-                <blockquote>{{ testimonial.body }}</blockquote>
-                <figcaption>— <cite>
-                    {% if testimonial.uri -%}
-                        <a href="{{testimonial.uri}}">{{ testimonial.author }}</a>
-                    {% else -%}
-                        {{ testimonial.author }}
-                    {%- endif %}
-                    </cite> on codl
-                    <aside><a href="https://chitter.xyz/@codl/99033327175116160">Send your testimonials</a></aside>
-                </figcaption>
-            </figure>
-        </footer>
     </body>
 </html>

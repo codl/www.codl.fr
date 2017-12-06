@@ -41,13 +41,3 @@ def cachebust_url_for(endpoint, **kwargs):
         path = os.path.join(app.static_folder, kwargs.get('filename'))
         kwargs['timestamp'] = int(os.stat(path).st_mtime)
     return url_for(endpoint, **kwargs)
-
-
-_testimonials = None
-@app.context_processor
-def inject_testimonial():
-    global _testimonials
-    if not _testimonials:
-        with open('data/testimonials.yml') as f:
-            _testimonials = yaml.load(f)
-    return dict(testimonial = random.choice(_testimonials))
