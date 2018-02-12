@@ -16,7 +16,7 @@ def redir_herd():
 def route_to_static(filename):
     return app.view_functions['static'](filename=filename)
 
-@app.route('/static-<int:timestamp>/<path:filename>')
+@app.route('/static@<int:timestamp>/<path:filename>')
 def static_cachebust(timestamp, filename):
     path = os.path.join(app.static_folder, filename)
     mtime = os.stat(path).st_mtime

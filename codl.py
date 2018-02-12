@@ -1,12 +1,15 @@
-from flask import Flask
-from lib.markdown import render_markdown
+from flask import Flask, render_template, Markup
+import misaka
+import importlib
 
 app = Flask(__name__)
 
 
 @app.route('/')
 def index():
-    return render_markdown('index.md')
+    with open('pages/index.md') as f:
+        html = misaka.html(f.read())
+        return render_template('index.html', content=Markup(html))
 
 
-import plumbing
+importlib.import_module('plumbing')
