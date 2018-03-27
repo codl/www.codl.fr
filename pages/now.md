@@ -1,6 +1,8 @@
 # What am I up to these days?
 
-I'm home, in Quimper.
+I'm home, in [Quimper][].
+
+[quimper]: https://en.wikipedia.org/wiki/Quimper
 
 These last few months I've been getting into a lot of new hobbies, and picking
 back up some old ones.
