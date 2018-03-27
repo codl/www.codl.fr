@@ -3,10 +3,8 @@ legacy redirects and hacky routing
 """
 
 from codl import app
-from flask import redirect, url_for, abort
+from flask import redirect, url_for, abort, request
 import os
-import yaml
-import random
 
 @app.route('/herd.html')
 def redir_herd():
@@ -41,3 +39,13 @@ def cachebust_url_for(endpoint, **kwargs):
         path = os.path.join(app.static_folder, kwargs.get('filename'))
         kwargs['timestamp'] = int(os.stat(path).st_mtime)
     return url_for(endpoint, **kwargs)
+
+
+@app.route('/.well_known/webfinger')
+def webfinger():
+    resource = request.args['resource']
+    if resource == 'acct:codl@codl.fr':
+        return redirect(
+                'https://chitter.xyz/.well_known/webfinger?resource=acct%3Acodl%40chitter.xyz')
+        return 'yes found'
+    return 'not found', 404
