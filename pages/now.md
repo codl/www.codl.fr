@@ -17,3 +17,5 @@ to use it, are doing wonders for my health.
 Speaking of social media and health, I stopped using Twitter altogether.
 I don't really miss it.
 I do miss people that I only knew there.
+
+<small>This is a [now page](https://nownownow.com/about). It has been last updated on March 27th, 2018.</small>
