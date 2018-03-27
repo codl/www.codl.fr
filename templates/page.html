@@ -2,11 +2,11 @@
 <html lang=en>
     {% include '_head.html' %}
     <body>
-        <div class="main index">
-            <section>
-                {{ content }}
-            </section>
+        <div class="main">
             {% include '_nav.html' %}
+            <article>
+                {{ content }}
+            </article>
         </div>
     </body>
 </html>

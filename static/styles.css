@@ -23,8 +23,8 @@ div.main {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: center;
+    align-items: stretch;
     margin: 3em auto;
     max-width: 46rem;
 }
@@ -53,4 +53,32 @@ em.codl {
     color: white;
     font-style: normal;
     padding: 0.1em 0.2em;
+}
+
+nav {
+    border: 1px none rgba(200,0,100,0.4);
+    border-top-style: solid;
+    border-bottom-style: solid;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+nav:first-child {
+    border-top-style: none;
+}
+
+nav:last-child {
+    border-bottom-style: none;
+}
+
+nav a {
+    margin: 0 .2em;
+}
+
+nav a:first-of-type {
+    margin-left: 0;
+}
+
+nav a:last-of-type {
+    margin-right: 0;
 }

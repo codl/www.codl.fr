@@ -3,13 +3,20 @@ import misaka
 import importlib
 
 app = Flask(__name__)
+importlib.import_module('plumbing')
+
+
+def render_markdown(filename, template='page.html'):
+    with open(filename) as f:
+        html = misaka.html(f.read())
+        return render_template(template, content=Markup(html))
 
 
 @app.route('/')
 def index():
-    with open('pages/index.md') as f:
-        html = misaka.html(f.read())
-        return render_template('index.html', content=Markup(html))
+    return render_markdown('pages/index.md', template='index.html')
 
 
-importlib.import_module('plumbing')
+@app.route('/now')
+def now():
+    return render_markdown('pages/now.md')
