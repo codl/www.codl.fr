@@ -4,7 +4,7 @@ I'm home, in Quimper.
 
 These last few months I've been getting into a lot of new hobbies, and picking
 back up some old ones.
-Photography, electronics, sewing, drawing.
+Photography, electronics, sewing, drawing, 3D modeling.
 I'm not great at any of them but I'm trying.
 
 A non-negligible part of my time has been spent maintaining
@@ -18,4 +18,4 @@ Speaking of social media and health, I stopped using Twitter altogether.
 I don't really miss it.
 I do miss people that I only knew there.
 
-<small>This is a [now page](https://nownownow.com/about). It has been last updated on March 27th, 2018.</small>
+<small>This is a [now page](https://nownownow.com/about). It has been last updated on March 28th, 2018.</small>
