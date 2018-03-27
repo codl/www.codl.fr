@@ -3,7 +3,7 @@ legacy redirects and hacky routing
 """
 
 from codl import app
-from flask import redirect, url_for, abort, request
+from flask import redirect, url_for, abort, request, send_file
 import os
 
 @app.route('/herd.html')
@@ -49,3 +49,19 @@ def webfinger():
                 'https://chitter.xyz/.well-known/webfinger?resource=acct%3Acodl%40chitter.xyz')
         return 'yes found'
     return 'not found', 404
+
+
+@app.route('/pgp')
+def pgp_key():
+    return send_file(
+            'assets/codl.asc',
+            mimetype='application/pgp-keys',
+            as_attachment=True, attachment_filename='codl.asc')
+
+
+@app.route('/ssh')
+def ssh_keys():
+    return send_file(
+            'assets/authorized_keys',
+            mimetype='text/plain')
+

@@ -1,4 +1,4 @@
-from flask import Flask, render_template, Markup
+from flask import Flask, render_template, Markup, render_template_string
 import misaka
 import importlib
 
@@ -8,7 +8,10 @@ importlib.import_module('plumbing')
 
 def render_markdown(filename, template='page.html'):
     with open(filename) as f:
-        html = misaka.html(f.read())
+        markdown = f.read()
+        processed = render_template_string(markdown)
+
+        html = misaka.html(processed)
         return render_template(template, content=Markup(html))
 
 
@@ -20,3 +23,8 @@ def index():
 @app.route('/now')
 def now():
     return render_markdown('pages/now.md')
+
+
+@app.route('/contact')
+def contact():
+    return render_markdown('pages/contact.md')
