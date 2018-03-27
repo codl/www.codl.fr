@@ -11,6 +11,3 @@ flask = "*"
 gunicorn = "*"
 misaka = "*"
 pyyaml = "*"
-
-
-[dev-packages]
