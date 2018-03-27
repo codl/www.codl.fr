@@ -41,11 +41,11 @@ def cachebust_url_for(endpoint, **kwargs):
     return url_for(endpoint, **kwargs)
 
 
-@app.route('/.well_known/webfinger')
+@app.route('/.well-known/webfinger')
 def webfinger():
     resource = request.args['resource']
     if resource == 'acct:codl@codl.fr':
         return redirect(
-                'https://chitter.xyz/.well_known/webfinger?resource=acct%3Acodl%40chitter.xyz')
+                'https://chitter.xyz/.well-known/webfinger?resource=acct%3Acodl%40chitter.xyz')
         return 'yes found'
     return 'not found', 404
