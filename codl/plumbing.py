@@ -2,7 +2,7 @@
 legacy redirects and hacky routing
 """
 
-from codl import app
+from .codl import app
 from flask import redirect, url_for, abort, request, send_file
 import os
 

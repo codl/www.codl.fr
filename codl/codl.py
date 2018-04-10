@@ -1,12 +1,14 @@
 from flask import Flask, render_template, Markup, render_template_string
 import misaka
 import importlib
+from pathlib import Path
 
 app = Flask(__name__)
-importlib.import_module('plumbing')
+importlib.import_module('codl.plumbing')
 
 
 def render_markdown(filename, template='page.html'):
+    filename = Path(app.root_path) / filename
     with open(filename) as f:
         markdown = f.read()
         processed = render_template_string(markdown)
