@@ -3,7 +3,7 @@ legacy redirects and hacky routing
 """
 
 from .codl import app
-from flask import redirect, url_for, abort, request, send_file
+from flask import redirect, url_for, abort, request, send_from_directory
 import os
 
 @app.route('/herd.html')
@@ -13,8 +13,17 @@ def redir_herd():
 @app.route('/.well-known/keybase.txt', defaults={'filename': 'keybase.txt'})
 @app.route('/robots.txt', defaults={'filename': 'robots.txt'})
 @app.route('/humans.txt', defaults={'filename': 'humans.txt'})
-def route_to_static(filename):
-    return app.view_functions['static'](filename=filename)
+@app.route('/ssh', defaults={
+        'filename': 'authorized_keys',
+        'mimetype': 'text/plain'
+    })
+@app.route('/pgp', defaults={
+        'filename': 'codl.asc',
+        'mimetype': 'application/pgp-keys',
+        'as_attachment': True
+    })
+def send_from_static(filename, **kwargs):
+    return send_from_directory(app.static_folder, filename, **kwargs)
 
 @app.route('/_/<int:timestamp>/<path:filename>')
 def static_cachebust(timestamp, filename):
@@ -23,7 +32,7 @@ def static_cachebust(timestamp, filename):
     if abs(mtime - timestamp) > 1:
         abort(404)
     else:
-        resp = route_to_static(filename)
+        resp = send_from_static(filename)
         resp.headers.set('cache-control', 'public, immutable, max-age=%s' % (60*60*24*365,))
         if 'expires' in resp.headers:
             resp.headers.remove('expires')
@@ -49,19 +58,3 @@ def webfinger():
                 'https://chitter.xyz/.well-known/webfinger?resource=acct%3Acodl%40chitter.xyz')
         return 'yes found'
     return 'not found', 404
-
-
-@app.route('/pgp')
-def pgp_key():
-    return send_file(
-            'assets/codl.asc',
-            mimetype='application/pgp-keys',
-            as_attachment=True, attachment_filename='codl.asc')
-
-
-@app.route('/ssh')
-def ssh_keys():
-    return send_file(
-            'assets/authorized_keys',
-            mimetype='text/plain')
-
