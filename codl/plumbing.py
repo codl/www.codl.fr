@@ -17,13 +17,17 @@ def redir_herd():
         'filename': 'authorized_keys',
         'mimetype': 'text/plain'
     })
-@app.route('/pgp', defaults={
-        'filename': 'codl.asc',
-        'mimetype': 'application/pgp-keys',
-        'as_attachment': True
-    })
 def send_from_static(filename, **kwargs):
     return send_from_directory(app.static_folder, filename, **kwargs)
+
+
+@app.route('/pgp')
+def pgp_key():
+    return send_from_static(
+            'codl.asc',
+            mimetype='application/pgp-keys',
+            as_attachment=True)
+
 
 @app.route('/_/<int:timestamp>/<path:filename>')
 def static_cachebust(timestamp, filename):
