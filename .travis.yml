@@ -1,0 +1,17 @@
+language: "python"
+
+python:
+    - "3.6"
+    - "3.6-dev"
+
+install:
+    - pip install -r requirements.txt
+    - pip install -r requirements-dev.txt
+cache:
+    - pip
+
+script:
+    - pytest --cov=codl --cov-report=
+
+after_success:
+    - codecov
