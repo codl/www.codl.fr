@@ -8,7 +8,7 @@ importlib.import_module('codl.plumbing')
 
 
 def render_markdown(filename, template='page.html'):
-    filename = Path(app.root_path) / filename
+    filename = str(Path(app.root_path) / filename)
     with open(filename) as f:
         markdown = f.read()
         processed = render_template_string(markdown)
