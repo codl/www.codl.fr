@@ -4,20 +4,26 @@ I'm home, in [Quimper][].
 
 [quimper]: https://en.wikipedia.org/wiki/Quimper
 
-These last few months I've been getting into a lot of new hobbies, and picking
-back up some old ones.
-Photography, electronics, sewing, drawing, 3D modeling.
-I'm not great at any of them but I'm trying.
+My depression has been getting worse, it eats up most of my time, either in anxiety and anguish, or in self-care.
+I wish I could spend that time on art and projects and exciting things, but I must take care of myself first.
 
-A non-negligible part of my time has been spent maintaining
-[Chitter](https://chitter.xyz/), the Mastodon server that I run with my friends
-Violet and Bug.
-I've met a lot of wonderful people on there.
-The content warning feature, and the liberal way in which the community tends
-to use it, are doing wonders for my health.
+I still maintain [Chitter][], my friends's and my Mastodon instance,
+albeit I try not to spend as much time on it as before.
+I've lost interest in contributing to Mastodon itself.
+I'm entertaining the idea of developing my own ActivityPub server instead but I have yet to start working on it.
 
-Speaking of social media and health, I stopped using Twitter altogether.
-I don't really miss it.
-I do miss people that I only knew there.
+[I occasionally draw, still][da], usually I join in in drawing
+[Donphan.social][donphan]'s pokémon of the day every other week.
 
-<small>This is a [now page](https://nownownow.com/about). It has been last updated on March 28th, 2018.</small>
+[chitter]: https://chitter.xyz/
+[donphan]: https://donphan.social/
+[da]: https://deviantart.com/codl
+
+I've been pondering the possibilty that I may be
+<abbr title="Aromantic">aro</abbr> and <abbr title="Asexual">ace</abbr>.
+I can't say for sure but it sounds about right.
+
+<small>
+This is a [now page](https://nownownow.com/about).
+It has last been updated on the 23rd of July, 2018.
+</small>
