@@ -82,3 +82,17 @@ nav a:first-of-type {
 nav a:last-of-type {
     margin-right: 0;
 }
+
+abbr[title] {
+    text-decoration: none;
+    position: relative;
+    margin-right: .5ch;
+}
+
+abbr[title]::after {
+    content: '?';
+    font-size: .7em;
+    position: absolute;
+    top: -.5em;
+    right: -.5em;
+}
