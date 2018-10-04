@@ -3,7 +3,9 @@
 I have an email address: <codl@codl.fr>. This is probably the best way to get in touch with me.
 
 I'm also on the fediverse at
-[codl@chitter.xyz](https://chitter.xyz/users/codl).
+<a href="https://chitter.xyz/users/codl" rel="me">
+codl@chitter.xyz
+</a>.
 
 For sensitive matters, you can send me encrypted email using my
 [public PGP key]({{url_for('pgp_key')}}).
