@@ -13,5 +13,4 @@ You'll have to bear with me though as it will take me some time to remember how 
 I'm talking, days.
 
 If you need to reach me quickly in an emergency,
-you can message `@codl` on Wire
-or [`@codll`](https://t.me/codll) on Telegram.
+you can message [`@codll`](https://t.me/codll) on Telegram.
