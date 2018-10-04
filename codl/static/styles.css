@@ -48,13 +48,6 @@ a:hover {
     background: #e8e0e0;
 }
 
-em.codl {
-    background-image: linear-gradient(-30deg, #f30, #f0a);
-    color: white;
-    font-style: normal;
-    padding: 0.1em 0.2em;
-}
-
 nav {
     border: 1px none rgba(200,0,100,0.4);
     border-top-style: solid;
