@@ -1,5 +1,5 @@
 -i https://pypi.python.org/simple/
-cffi==1.11.5; python_version != '3.3.*'
+cffi==1.11.5; python_version != '3.2.*'
 click==7.0; python_version != '3.2.*'
 flask==1.0.2
 gunicorn==19.9.0
@@ -7,6 +7,6 @@ itsdangerous==0.24
 jinja2==2.10
 markupsafe==1.0
 misaka==2.1.0
-pycparser==2.19; python_version != '3.3.*'
+pycparser==2.19; python_version != '3.2.*'
 pyyaml==3.13
 werkzeug==0.14.1
