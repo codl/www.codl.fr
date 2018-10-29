@@ -3,7 +3,7 @@
 I have an email address: <codl@codl.fr>. This is probably the best way to get in touch with me.
 
 I'm also on the fediverse at
-<a href="https://chitter.xyz/users/codl" rel="me">
+<a href="https://chitter.xyz/@codl" rel="me">
 codl@chitter.xyz
 </a>.
 
