@@ -3,7 +3,7 @@ legacy redirects and hacky routing
 """
 
 from .codl import app
-from flask import redirect, url_for, abort, request, send_from_directory
+from flask import redirect, url_for, abort, request, send_from_directory, Response
 import os
 
 
@@ -68,3 +68,7 @@ def webfinger():
         )
         return 'yes found'
     return 'not found', 404
+
+@app.route('/', methods=('DUMBASS',))
+def dumbass():
+    return Response('yahaha you found me', content_type='text/dumbass')
