@@ -24,7 +24,7 @@ def index():
 
 @app.route('/now')
 def now():
-    return render_markdown('pages/now.md')
+    return render_markdown('pages/now.md'), 404
 
 
 @app.route('/contact')
