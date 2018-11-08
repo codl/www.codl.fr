@@ -5,7 +5,7 @@ flask==1.0.2
 gunicorn==19.9.0
 itsdangerous==1.1.0
 jinja2==2.10
-markupsafe==1.0
+markupsafe==1.1.0
 misaka==2.1.0
 pycparser==2.19
 pyyaml==3.13
