@@ -123,10 +123,10 @@
         },
         "misaka": {
             "hashes": [
-                "sha256:87637d90f5f52595d07ed1be93d0576d32632d125694b96b8e4ce55cd4c019fb"
+                "sha256:62f35254550095d899fc2ab8b33e156fc5e674176f074959cbca43cf7912ecd7"
             ],
             "index": "pypi",
-            "version": "==2.1.0"
+            "version": "==2.1.1"
         },
         "pycparser": {
             "hashes": [
@@ -372,10 +372,10 @@
         },
         "soupsieve": {
             "hashes": [
-                "sha256:29bf6f6d4a641eb0a172c1a95bbc4466009cceaceb747a6e425efd7d0b5fbea2",
-                "sha256:7a89864492e82b92eac0097f966f30f5f96597ba1af3c3b5385b41bc92cebe55"
+                "sha256:057e08f362a255b457a5781675211556799ed3bb8807506eaac3809390bc304b",
+                "sha256:f7d99b41637be2f249dfcc06ae93c13fcbbdfa7bb68b15308cdd0734e58146f1"
             ],
-            "version": "==1.6"
+            "version": "==1.6.1"
         },
         "urllib3": {
             "hashes": [
