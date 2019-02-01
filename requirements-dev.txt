@@ -13,13 +13,13 @@ itsdangerous==1.1.0
 jinja2==2.10
 markupsafe==1.1.0
 more-itertools==5.0.0
-pluggy==0.8.0
+pluggy==0.8.1
 py==1.7.0
 pytest-cov==2.6.0
 pytest-flask==0.14.0
-pytest==4.0.2
+pytest==4.2.0
 requests==2.21.0
 six==1.12.0
-soupsieve==1.6.1
+soupsieve==1.7.3
 urllib3==1.24.1
 werkzeug==0.14.1
