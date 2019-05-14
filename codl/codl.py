@@ -1,4 +1,5 @@
 from flask import Flask, render_template, Markup, render_template_string
+from flask import redirect, url_for
 import misaka
 import importlib
 from pathlib import Path
@@ -20,13 +21,3 @@ def render_markdown(filename, template='page.html'):
 @app.route('/')
 def index():
     return render_markdown('pages/index.md', template='index.html')
-
-
-@app.route('/now')
-def now():
-    return render_markdown('pages/now.md'), 404
-
-
-@app.route('/contact')
-def contact():
-    return render_markdown('pages/contact.md')

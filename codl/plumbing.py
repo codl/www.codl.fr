@@ -15,19 +15,20 @@ def redir_herd():
 @app.route('/.well-known/keybase.txt', defaults={'filename': 'keybase.txt'})
 @app.route('/robots.txt', defaults={'filename': 'robots.txt'})
 @app.route('/humans.txt', defaults={'filename': 'humans.txt'})
-@app.route(
-    '/ssh', defaults={
-        'filename': 'authorized_keys',
-        'mimetype': 'text/plain'
-    })
+@app.route('/ssh',
+           defaults={
+               'filename': 'authorized_keys',
+               'mimetype': 'text/plain'
+           })
 def send_from_static(filename, **kwargs):
     return send_from_directory(app.static_folder, filename, **kwargs)
 
 
 @app.route('/pgp')
 def pgp_key():
-    return send_from_static(
-        'codl.asc', mimetype='application/pgp-keys', as_attachment=True)
+    return send_from_static('codl.asc',
+                            mimetype='application/pgp-keys',
+                            as_attachment=True)
 
 
 @app.route('/_/<int:timestamp>/<path:filename>')
@@ -69,6 +70,17 @@ def webfinger():
         return 'yes found'
     return 'not found', 404
 
-@app.route('/', methods=('DUMBASS',))
+
+@app.route('/', methods=('DUMBASS', ))
 def dumbass():
     return Response('yahaha you found me', content_type='text/dumbass')
+
+
+@app.route('/now')
+def now():
+    return 'Gone', 410
+
+
+@app.route('/contact')
+def contact():
+    return redirect(url_for('index'))
