@@ -2,10 +2,10 @@ software jackass
 
 📧 <codl@codl.name>
 
-💬 <https://chitter.xyz/@codl>
+💬 <a href='https://chitter.xyz/@codl' rel='me'>https://chitter.xyz/@codl</a>
 
-🎨 <https://donphan.social/@codl>
+🎨 <a href='https://donphan.social/@codl' rel='me'>https://donphan.social/@codl</a>
 
-💻 <https://github.com/codl>
+💻 <a href='https://github.com/codl' rel='me'>https://github.com/codl</a>
 
 ![This page under construction]({{url_for('static', filename='construction.gif')}})
