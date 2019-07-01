@@ -8,5 +8,5 @@ jinja2==2.10.1
 markupsafe==1.1.1
 misaka==2.1.1
 pycparser==2.19
-pyyaml==5.1
-werkzeug==0.15.2
+pyyaml==5.1.1
+werkzeug==0.15.4
