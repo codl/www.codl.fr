@@ -13,4 +13,5 @@ if PROJDIR not in sys.path:
 @pytest.fixture
 def app():
     from codl import app
+
     return app
