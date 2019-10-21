@@ -1,4 +1,4 @@
-FROM python:3.8 AS testing
+FROM python:3.8-buster AS testing
 WORKDIR /usr/src/app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
@@ -10,7 +10,7 @@ COPY tests tests
 RUN python -m pytest
 
 
-FROM python:3.8
+FROM python:3.8-buster
 WORKDIR /usr/src/app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
