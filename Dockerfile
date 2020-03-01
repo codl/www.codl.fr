@@ -1,4 +1,4 @@
-FROM python:3.8-buster AS testing
+FROM python:3.8 AS testing
 WORKDIR /usr/src/app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
@@ -10,7 +10,7 @@ COPY tests tests
 RUN python -m pytest --cov=codl
 
 
-FROM python:3.8-buster
+FROM python:3.8
 WORKDIR /usr/src/app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
