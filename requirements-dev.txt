@@ -4,8 +4,8 @@ beautifulsoup4==4.9.1
 certifi==2020.6.20
 chardet==3.0.4
 click==7.1.2
-codecov==2.1.7
-coverage==5.1
+codecov==2.1.8
+coverage==5.2.1
 flask==1.1.2
 idna==2.10
 itsdangerous==1.1.0
@@ -22,6 +22,6 @@ pytest==5.4.3
 requests==2.24.0
 six==1.15.0
 soupsieve==2.0.1
-urllib3==1.25.9
+urllib3==1.25.10
 wcwidth==0.2.5
 werkzeug==1.0.1
