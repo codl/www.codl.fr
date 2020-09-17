@@ -8,6 +8,7 @@ codecov==2.1.9
 coverage==5.3
 flask==1.1.2
 idna==2.10
+iniconfig==1.0.1
 itsdangerous==1.1.0
 jinja2==2.11.2
 markupsafe==1.1.1
@@ -18,10 +19,10 @@ py==1.9.0
 pyparsing==2.4.7
 pytest-cov==2.10.1
 pytest-flask==1.0.0
-pytest==5.4.3
+pytest==6.0.2
 requests==2.24.0
 six==1.15.0
 soupsieve==2.0.1
+toml==0.10.1
 urllib3==1.25.10
-wcwidth==0.2.5
 werkzeug==1.0.1
