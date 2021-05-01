@@ -18,9 +18,9 @@ py==1.10.0
 pyparsing==2.4.7
 pytest-cov==2.11.1
 pytest-flask==1.2.0
-pytest==6.2.2
+pytest==6.2.3
 requests==2.25.1
-soupsieve==2.2 ; python_version >= '3.0'
+soupsieve==2.2.1 ; python_version >= '3.0'
 toml==0.10.2
-urllib3==1.26.3
+urllib3==1.26.4
 werkzeug==1.0.1
