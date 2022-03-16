@@ -7,24 +7,14 @@ from flask import redirect, url_for, abort, request, send_from_directory, Respon
 import os
 
 
-@app.route("/herd.html")
-def redir_herd():
-    return redirect(url_for("index"), code=301)
-
 
 @app.route("/.well-known/keybase.txt", defaults={"filename": "keybase.txt"})
 @app.route("/robots.txt", defaults={"filename": "robots.txt"})
 @app.route("/humans.txt", defaults={"filename": "humans.txt"})
 @app.route("/ssh", defaults={"filename": "authorized_keys", "mimetype": "text/plain"})
+@app.route("/pgp", defaults={"filename": "codl.asc", "mimetype": "application/pgp-keys", "as_attachment": True})
 def send_from_static(filename, **kwargs):
     return send_from_directory(app.static_folder, filename, **kwargs)
-
-
-@app.route("/pgp")
-def pgp_key():
-    return send_from_static(
-        "codl.asc", mimetype="application/pgp-keys", as_attachment=True
-    )
 
 
 @app.route("/_/<int:timestamp>/<path:filename>")
@@ -67,16 +57,13 @@ def webfinger():
     return "not found", 404
 
 
-@app.route("/", methods=("DUMBASS",))
-def dumbass():
-    return Response("yahaha you found me", content_type="text/dumbass")
-
-
 @app.route("/now")
 def now():
     return "Gone", 410
 
 
 @app.route("/contact")
-def contact():
-    return redirect(url_for("index"))
+@app.route("/herd.html")
+def redir_index():
+    return redirect(url_for("index"), code=301)
+

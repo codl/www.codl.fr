@@ -1,5 +1,7 @@
-ARG python=3.10
-FROM python:$python as testing
+ARG python=3.10.2
+
+FROM python:$python AS testing
+
 RUN pip install --no-cache-dir -U pip pipenv
 WORKDIR /usr/src/app
 
@@ -12,6 +14,7 @@ RUN python -m pytest --cov=codl
 
 
 FROM python:$python
+
 RUN pip install --no-cache-dir -U pip pipenv
 WORKDIR /usr/src/app
 

@@ -1,11 +1,177 @@
-<!doctype html>
 <html lang=en>
-    {% include '_head.html' %}
-    <body>
-        <div class="main index">
-            <section>
-                {{ content }}
-            </section>
-        </div>
+    <head>
+        <title>codl</title>
+<style>
+
+@font-face {
+    font-family: "Avara";
+    src:
+        url("{{url_for('static', filename='avara/Avara-Bold.woff')}}") format("woff"),
+        url("{{url_for('static', filename='avara/Avara-Bold.woff2')}}") format("woff2"),
+        url("{{url_for('static', filename='avara/Avara-Bold.ttf')}}") format("truetype"),
+        url("{{url_for('static', filename='avara/Avara-Bold.eot')}}") format("embedded-opentype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Avara";
+    src:
+        url("{{url_for('static', filename='avara/Avara-BoldItalic.woff')}}") format("woff"),
+        url("{{url_for('static', filename='avara/Avara-BoldItalic.woff2')}}") format("woff2"),
+        url("{{url_for('static', filename='avara/Avara-BoldItalic.ttf')}}") format("truetype"),
+        url("{{url_for('static', filename='avara/Avara-BoldItalic.eot')}}") format("embedded-opentype");
+    font-weight: 700;
+    font-style: italic;
+}
+:root {
+    font-size: 19px;
+
+    --max-width: 33rem;
+
+    --background-color: white;
+    --text-color: black;
+    --primary-color: #0021d1;
+    --primary-dim-color: #62b; /* visited links */
+    --primary-area-color: #00d;
+    --primary-area-reverse-color: white;
+}
+body.dark {
+    --background-color: black;
+    --text-color: white;
+    --primary-color: #ffd714;
+    --primary-dim-color: #d7f277; /* visited links */
+    --primary-area-color: #ecc60f;
+    --primary-area-reverse-color: white;
+}
+body {
+    font-family: "Liberation Sans", Arial, sans-serif;
+    line-height: 1.45em;
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+body > * {
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
+}
+header {
+    margin-top: 4rem;
+}
+header {
+    background-color: var(--primary-area-color);
+    max-width: none;
+}
+header > .title-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+header > .title-container > * {
+    background-color: var(--background-color);
+    padding: .3em;
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+    margin: 0;
+    /* display: inline-block;*/
+}
+header > .title-container > h1 {
+    padding-top: .9em;
+    padding-bottom: .6em;
+    font-weight: 500;
+    font-style: italic;
+    font-family: avara;
+}
+
+section {
+    border: .1em var(--text-color) solid;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+section > h1 {
+    background-color: var(--background-color);
+    font-size: 1.1em;
+    font-family: avara;
+    border: .1em var(--primary-color) solid;
+    margin: 0;
+    margin-left: -1em;
+    margin-top: -.7em;
+    padding: .1em .2em;
+    padding-bottom: -.3em;
+    max-height: 1em;
+    display: inline-block;
+    text-shadow:
+        var(--background-color)  .1em 0,
+        var(--background-color) -.1em 0;
+}
+section > * {
+    padding-left: 1.3em;
+    padding-right: 1.3em;
+}
+a {
+    color: var(--primary-color);
+}
+a:visited, a:active {
+    color: var(--primary-dim-color);
+    font-style: italic;
+}
+</style>
+
+    </head>
+    <body class="dark">
+        <header>
+            <div class="title-container">
+                <h1>Sideways egg</h1>
+                <p>A website about <a href="/#codl">codl</a>'s eccentricities</p>
+            </div>
+        </header>
+
+        <section>
+            <h1>Visuals</h1>
+
+            <p>I draw and paint cartoon characters, anthropomorphic animals, digitally and traditionally. I've been called a furry artist.</p>
+
+            <p><img src="{{url_for('static', filename='construction.gif')}}" alt="This section is under construction"></p>
+
+            <p>In the future I want to have an art gallery on this site, but until then you can find my art on
+            <a href="https://donphan.social/@codl" rel="me">donphan.social</a> or
+            <a href="https://www.deviantart.com/codl" rel="me">DeviantArt</a>.
+            I also crosspost in other places like
+            <a href="https://twitter.com/codl" rel="me">Twitter</a> and
+            <a href="https://codll.tumblr.com" rel="me">Tumblr</a>.</p>
+        </section>
+
+        <section>
+            <h1>Computings</h1>
+
+            <p>I'm primarily a Python web developer. Here is a selection of software projects of mine:</p>
+            <ul>
+                <li><a href="https://feedplz.codl.fr">Feedplz</a> is a feed proxy for FurAffinity and other sites that don't provide feeds.</li>
+                <li><a href="https://github.com/codl/forget">Forget</a> is a service that automatically deletes your Twitter, Mastodon, or Misskey posts when they become old. I run a server at <a href="https://forget.codl.fr">forget.codl.fr</a>.</li>
+            </ul>
+            <p>Many older projects of mine can be found on <a href="https://github.com/codl" rel="me">GitHub</a> account.</p>
+            <p>Oh and, I'm looking for work. E-mail me.</p>
+        </section>
+
+        <section id="codl">
+            <h1>Who's codl?</h1>
+            <p>I'm codl! I thought I made that clear! I'm a queer weirdo from
+            France in their late twenties. They/them, please.</p>
+            <p>It's pronounced "co-dell". Like Adele but, with co.</p>
+            <p>I call myself a dot-comrade, a computer toucher, and an animal
+            drawist. I have interests in databases, the web, open source (but
+            not in that way), decentralised systems (but not in that way),
+            visual arts, music, cartography, video captioning, among other
+            things.</p>
+            <p>If you'd like to be social and read the worst puns anyone has
+            ever written, you can find me on the fediverse at
+            <a href="https://chitter.xyz/@codl" rel="me">codl@chitter.xyz</a>.</p>
+            <p>If you need to reach me, please email <a href="mailto:codl@codl.fr" rel="me">codl@codl.fr</a>. I have <a href="https://codl.fr/pgp">a public key</a> but don't bother, because it'll take me a day to remember how to use GPG.</p>
+        </section>
+
     </body>
 </html>

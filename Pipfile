@@ -4,10 +4,8 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-flask = "*"
-gunicorn = "*"
-misaka = "*"
-pyyaml = "*"
+flask = "~=2.0.3"
+gunicorn = "~=20.1.0"
 
 [dev-packages]
 pytest = "*"
