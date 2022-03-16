@@ -7,12 +7,18 @@ from flask import redirect, url_for, abort, request, send_from_directory, Respon
 import os
 
 
-
 @app.route("/.well-known/keybase.txt", defaults={"filename": "keybase.txt"})
 @app.route("/robots.txt", defaults={"filename": "robots.txt"})
 @app.route("/humans.txt", defaults={"filename": "humans.txt"})
 @app.route("/ssh", defaults={"filename": "authorized_keys", "mimetype": "text/plain"})
-@app.route("/pgp", defaults={"filename": "codl.asc", "mimetype": "application/pgp-keys", "as_attachment": True})
+@app.route(
+    "/pgp",
+    defaults={
+        "filename": "codl.asc",
+        "mimetype": "application/pgp-keys",
+        "as_attachment": True,
+    },
+)
 def send_from_static(filename, **kwargs):
     return send_from_directory(app.static_folder, filename, **kwargs)
 
@@ -66,4 +72,3 @@ def now():
 @app.route("/herd.html")
 def redir_index():
     return redirect(url_for("index"), code=301)
-
