@@ -1,3 +1,6 @@
+"""
+This file is run by pytest before tests
+"""
 import sys
 from pathlib import Path
 import pytest
@@ -12,6 +15,9 @@ if PROJDIR not in sys.path:
 
 @pytest.fixture
 def app():
+    """
+    Convenience fixture that returns the flask app
+    """
     from codl import app
 
     return app

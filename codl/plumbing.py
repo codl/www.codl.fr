@@ -1,5 +1,5 @@
 """
-legacy redirects and hacky routing
+Legacy redirects and hacky routing
 """
 
 from .codl import app
@@ -20,11 +20,20 @@ import os
     },
 )
 def send_from_static(filename, **kwargs):
+    """
+    Serves files from the static folder.
+    """
     return send_from_directory(app.static_folder, filename, **kwargs)
 
 
 @app.route("/_/<int:timestamp>/<path:filename>")
 def static_cachebust(timestamp, filename):
+    """
+    Cachebusted static file serving
+
+    Expects a timestamp in the url matching the file's mtime, serves files with
+    immutable 1-year cache
+    """
     path = os.path.join(app.static_folder, filename)
     mtime = os.stat(path).st_mtime
     if abs(mtime - timestamp) > 1:
@@ -39,12 +48,10 @@ def static_cachebust(timestamp, filename):
         return resp
 
 
-@app.context_processor
-def replace_url_for():
-    return dict(url_for=cachebust_url_for)
-
-
 def cachebust_url_for(endpoint, **kwargs):
+    """
+    Patched version of url_for that cachebusts static urls
+    """
     if endpoint == "static":
         endpoint = "static_cachebust"
         path = os.path.join(app.static_folder, kwargs.get("filename"))
@@ -52,8 +59,19 @@ def cachebust_url_for(endpoint, **kwargs):
     return url_for(endpoint, **kwargs)
 
 
+@app.context_processor
+def replace_url_for():
+    """
+    Context processor that patches in the version of url_for with cachebusted static files
+    """
+    return dict(url_for=cachebust_url_for)
+
+
 @app.route("/.well-known/webfinger")
 def webfinger():
+    """
+    Redirects webfinger requests for codl@codl.fr to codl@chitter.xyz
+    """
     resource = request.args["resource"]
     if resource == "acct:codl@codl.fr":
         return redirect(
@@ -71,4 +89,7 @@ def now():
 @app.route("/contact")
 @app.route("/herd.html")
 def redir_index():
+    """
+    Redirects for things that have now been merged into the index
+    """
     return redirect(url_for("index"), code=301)
