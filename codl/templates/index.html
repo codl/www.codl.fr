@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang=en>
     <head>
 <style>
@@ -69,37 +70,40 @@ header > .title-container > * {
     padding-left: 1.3rem;
     padding-right: 1.3rem;
     margin: 0;
-    /* display: inline-block;*/
+    font-family: avara;
+    font-weight: 500;
 }
 header > .title-container > h1 {
     padding-top: .9em;
     padding-bottom: .6em;
     font-weight: 500;
     font-style: italic;
-    font-family: avara;
 }
 
 section {
     border: .1em var(--text-color) solid;
     margin-top: 2.5rem;
     margin-bottom: 1.5rem;
+    padding-top: 1em;
+    position: relative;
 }
 
 section > h1 {
     background-color: var(--background-color);
-    font-size: 1.1em;
+    font-size: 1.2em;
     font-family: avara;
-    border: .1em var(--primary-color) solid;
-    margin: 0;
-    margin-left: -1em;
-    margin-top: -.7em;
+    border: .2rem var(--primary-color) solid;
     padding: .1em .2em;
-    padding-bottom: -.3em;
+    padding-bottom: 0;
     max-height: 1em;
     display: inline-block;
     text-shadow:
         var(--background-color)  .1em 0,
         var(--background-color) -.1em 0;
+    position: absolute;
+    left: -1rem;
+    top: -.7rem;
+    margin: 0;
 }
 section > * {
     padding-left: 1.3em;
@@ -137,7 +141,7 @@ footer svg.beemark path.filled {
 }
 </style>
 
-        <title>Panic Parade, a website just for codl</title>
+        <title>Panic parade, a website just for codl</title>
         <link rel='icon' href='{{url_for("static", filename="icon.png")}}'/>
 
     </head>
@@ -145,7 +149,6 @@ footer svg.beemark path.filled {
         <header>
             <div class="title-container">
                 <h1>Panic parade</h1>
-                <p>Words and pictures from codl</p>
             </div>
         </header>
 
