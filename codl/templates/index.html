@@ -63,6 +63,8 @@ header > .title-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 header > .title-container > * {
     background-color: var(--background-color);
@@ -81,11 +83,24 @@ header > .title-container > h1 {
 }
 
 section {
-    border: .1em var(--text-color) solid;
     margin-top: 2.5rem;
     margin-bottom: 1.5rem;
-    padding-top: 1em;
+    padding: 1rem;
+    padding-bottom: 0.01rem; /* to prevent margin collapse */
     position: relative;
+    max-width: var(--max-width);
+}
+
+section::after {
+    border: .1em var(--text-color) solid;
+    position: absolute;
+    z-index: 0;
+    display: block;
+    left: 1em;
+    right: 1em;
+    top: 0;
+    bottom: 0;
+    content: " ";
 }
 
 section > h1 {
@@ -101,11 +116,13 @@ section > h1 {
         var(--background-color)  .1em 0,
         var(--background-color) -.1em 0;
     position: absolute;
-    left: -1rem;
+    left: 0;
     top: -.7rem;
     margin: 0;
 }
 section > * {
+    z-index: 100;
+    position: relative;
     padding-left: 1.3em;
     padding-right: 1.3em;
 }
@@ -143,6 +160,7 @@ footer svg.beemark path.filled {
 
         <title>Panic parade, a website just for codl</title>
         <link rel='icon' href='{{url_for("static", filename="icon.png")}}'/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
     </head>
     <body>
@@ -157,7 +175,7 @@ footer svg.beemark path.filled {
 
             <p>I draw and paint cartoon characters, digitally and traditionally. I've been called a furry artist, which should give you an idea, but I prefer to call myself an animal drawer. I also dabble in other kinds of visual arts like 3D modeling.</p>
 
-            <p><img src="{{url_for('static', filename='construction.gif')}}" alt="This section is under construction"></p>
+            <p><img src="{{url_for('static', filename='construction.gif')}}" alt="This section is under construction" height=40 width=40></p>
 
             <p>In the future I want to have an art gallery on this site, but until then you can find my art on
             <a href="https://donphan.social/@codl" rel="me">donphan.social</a> or
