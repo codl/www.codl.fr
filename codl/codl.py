@@ -8,8 +8,8 @@ app = Flask(__name__)
 importlib.import_module("codl.plumbing")
 
 
-@app.route("/")
 @app.route("/index.html")
+@app.route("/")
 def index():
     "Serves the index page."
     resp = make_response(render_template("index.html"))
