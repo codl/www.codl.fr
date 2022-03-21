@@ -12,3 +12,5 @@ repos:
     rev: 1.5.0
     hooks:
       - id: interrogate
+        args: [--exclude=codl/config.py, --exclude=codl/config.example.py, --verbose]
+        pass_filenames: false # https://github.com/econchick/interrogate/issues/60

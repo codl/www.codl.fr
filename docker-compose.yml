@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  www:
+    build: .
+    image: www.codl.fr
+    volumes: ./codl/config.py:/usr/src/app/codl/config.py:ro
+    restart: unless-stopped
+
+  redis:
+    image: redis
+    restart: unless-stopped

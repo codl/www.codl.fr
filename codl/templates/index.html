@@ -163,6 +163,20 @@ footer p {
     font-style: italic;
     color: var(--accent-color);
 }
+
+ul.not-a-carousel {
+    display: flex;
+    flex-direction: row;
+}
+ul.not-a-carousel li {
+    margin: 0 1em;
+    list-style: none;
+    flex: none;
+}
+
+ul.not-a-carousel img {
+    height: 7rem;
+}
 </style>
 
         <title>Panic parade, a website just for codl</title>
@@ -184,12 +198,25 @@ footer p {
 
             <p><img src="{{url_for('static', filename='construction.gif')}}" alt="This section is under construction" height=40 width=40></p>
 
+            <ul id="recent-works" class="not-a-carousel">
+            {% for work in artworks[:5] %}
+                <li><a href="{{work[0]}}"><img src="{{work[1]}}"></a></li>
+            {% endfor %}
+            </ul>
+            {#
+            <script type="application/json" id="artworks">
+                {{ artworks|tojson }}
+            </script>
+            #}
+
             <p>In the future I want to have an art gallery on this site, but until then you can find my art on
-            <a href="https://donphan.social/@codl" rel="me">donphan.social</a> or
+            <a href="https://donphan.social/@codl" rel="me">Donphan.social</a> or
             <a href="https://www.deviantart.com/codl" rel="me">DeviantArt</a>.
+            Above are some works I posted on Donphan.social recently.
             I also crosspost on
             <a href="https://twitter.com/codl" rel="me">Twitter</a> and
             <a href="https://codll.tumblr.com" rel="me">Tumblr</a>.</p>
+
         </section>
 
         <section>
