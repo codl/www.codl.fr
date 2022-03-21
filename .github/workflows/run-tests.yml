@@ -23,7 +23,7 @@ jobs:
         python -m pip install --upgrade pip pipenv
         pipenv sync -d
     - name: Launch redis
-      run: docker run -p 6379:6379 -d redis
+      run: docker run -p 6379:6379 -d redis:6.2
     - name: Test with pytest
       env:
         DONPHAN_ACCESS_TOKEN: ${{ secrets.DONPHAN_ACCESS_TOKEN }}
