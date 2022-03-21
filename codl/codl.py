@@ -35,7 +35,7 @@ def get_redis() -> redis.Redis:
 
 def recent_artworks() -> list[tuple[str, str]]:
     """Return a list of (post_url, thumbnail_url) tuples for recent public media posts on donphan"""
-    CACHE_KEY = "www.codl.fr:1:artworks"
+    CACHE_KEY = "www.codl.fr:2:artworks"
     r = get_redis()
     cached = r.get(CACHE_KEY)
     if not cached:
@@ -54,7 +54,7 @@ def recent_artworks() -> list[tuple[str, str]]:
         me = m.me()
         statuses = m.account_statuses(me["id"], only_media=True, exclude_replies=True)
         artworks = list()
-        for status in statuses:
+        for status in sorted(statuses, key=lambda a: a["reblogs_count"], reverse=True):
             if not status["sensitive"] and status["visibility"] == "public":
                 artworks.append(
                     (status["url"], status["media_attachments"][0]["preview_url"])
