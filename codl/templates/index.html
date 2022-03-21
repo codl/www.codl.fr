@@ -203,7 +203,7 @@ ul.not-a-carousel img {
             <p><img src="{{url_for('static', filename='construction.gif')}}" alt="This section is under construction" height=40 width=40></p>
 
             <ul id="recent-works" class="not-a-carousel">
-            {% for work in artworks[:5] %}
+            {% for work in artworks %}
                 <li><a href="{{work[0]}}"><img src="{{work[1]}}"></a></li>
             {% endfor %}
             </ul>

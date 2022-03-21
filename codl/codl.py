@@ -33,9 +33,12 @@ def get_redis() -> redis.Redis:
     return redis_conn
 
 
-def recent_artworks() -> list[tuple[str, str]]:
-    """Return a list of (post_url, thumbnail_url) tuples for recent public media posts on donphan"""
-    CACHE_KEY = "www.codl.fr:2:artworks"
+def recent_artworks(count=7) -> list[tuple[str, str]]:
+    """
+    Return a list of (post_url, thumbnail_url) tuples for recent public media
+    posts on donphan, with the most popular (most faves) closer to the middle
+    """
+    CACHE_KEY = "www.codl.fr:4:artworks:{}".format(count)
     r = get_redis()
     cached = r.get(CACHE_KEY)
     if not cached:
@@ -52,13 +55,19 @@ def recent_artworks() -> list[tuple[str, str]]:
         )
 
         me = m.me()
-        statuses = m.account_statuses(me["id"], only_media=True, exclude_replies=True)
+        statuses = m.account_statuses(
+            me["id"], only_media=True, exclude_replies=True, limit=40
+        )
         artworks = list()
-        for status in sorted(statuses, key=lambda a: a["reblogs_count"], reverse=True):
-            if not status["sensitive"] and status["visibility"] == "public":
-                artworks.append(
-                    (status["url"], status["media_attachments"][0]["preview_url"])
-                )
+        for status in filter(
+            lambda a: not a["sensitive"] and a["visibility"] == "public",
+            sorted(statuses, key=lambda a: a["favourites_count"], reverse=True),
+        ):
+            artwork = (status["url"], status["media_attachments"][0]["preview_url"])
+            artworks.append(artwork)
+            artworks = list(reversed(artworks))
+            if len(artworks) > count:
+                break
 
         r.set(CACHE_KEY, pickle.dumps(artworks), ex=3600)
 
