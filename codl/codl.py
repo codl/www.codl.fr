@@ -8,9 +8,19 @@ import redis
 import pickle
 from typing import Optional
 import requests
+import os
 
 app = Flask(__name__)
-app.config.from_pyfile("config.py")
+
+DEFAULT_CONFIG = dict(
+    DONPHAN_ACCESS_TOKEN=None,
+    REDIS_HOST="127.0.0.1",
+    REDIS_PORT=6379,
+    REDIS_DB=0,
+)
+for key in DEFAULT_CONFIG:
+    app.config[key] = os.getenv(key, DEFAULT_CONFIG[key])
+
 importlib.import_module("codl.plumbing")
 
 
@@ -42,7 +52,7 @@ def recent_artworks(count=7) -> list[tuple[str, str]]:
     r = get_redis()
     cached = r.get(CACHE_KEY)
     if not cached:
-        access_token = app.config.get("MASTODON_ACCESS_TOKEN")
+        access_token = app.config.get("DONPHAN_ACCESS_TOKEN")
         if not access_token:
             raise NoMastodonAccess()
 

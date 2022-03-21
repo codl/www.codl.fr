@@ -1,4 +1,4 @@
 .coverage
 .pytest_cache
 htmlcov
-config.py
+.env

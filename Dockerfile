@@ -10,10 +10,9 @@ RUN pipenv sync -d --system
 
 COPY codl codl
 COPY tests tests
-RUN python -m pytest --cov=codl
+CMD ["python", "-m", "pytest", "--cov=codl"]
 
-
-FROM python:$python
+FROM python:$python as app
 
 RUN pip install --no-cache-dir -U pip pipenv
 WORKDIR /usr/src/app

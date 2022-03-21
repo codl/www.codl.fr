@@ -3,8 +3,11 @@ services:
   www:
     build: .
     image: www.codl.fr
-    volumes: ./codl/config.py:/usr/src/app/codl/config.py:ro
     restart: unless-stopped
+    ports:
+      - "9311:80"
+    env:
+      REDIS_HOST: "redis"
 
   redis:
     image: redis
