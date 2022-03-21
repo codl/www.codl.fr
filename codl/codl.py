@@ -93,8 +93,6 @@ def index():
     "Serves the index page."
     resp = make_response(render_template("index.html", artworks=recent_artworks()))
     resp.add_etag()
-    if request.args.get('flag_preconnect') == '1':
-        resp.headers.add("link", "<https://blob.jortage.com>; rel=preconnect")
-        resp.headers.add("link", "<https://pool.jortage.com>; rel=preconnect")
+    resp.headers.add("link", "<https://blob.jortage.com>; rel=preconnect")
 
     return resp
